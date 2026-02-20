@@ -225,39 +225,9 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
         get() = appCtx.getPrefBoolean(PreferKey.aiContentRepair, false)
 
     val aiRepairApiKey: String?
+        get() = appCtx.getPrefString(PreferKey.aiRepairApiKey)
 
-    val aiContentRepairCacheEnabled: Boolean
-        get() = appCtx.getPrefBoolean(PreferKey.aiContentRepairCache, true)
 
-    val aiRepairProviderType: String?
-        get() = appCtx.getPrefString(PreferKey.aiRepairProviderType)
-
-    val aiRepairApiUrl: String?
-        get() = appCtx.getPrefString(PreferKey.aiRepairApiUrl)
-
-    val aiRepairModel: String?
-        get() = appCtx.getPrefString(PreferKey.aiRepairModel)
-
-    val aiRepairTemperature: Float
-        get() = appCtx.getPrefFloat(PreferKey.aiRepairTemperature, 0.2f)
-
-    val aiRepairMaxTokens: Int
-        get() = appCtx.getPrefInt(PreferKey.aiRepairMaxTokens, 512)
-
-    val aiRepairContextLength: Int
-        get() = appCtx.getPrefInt(PreferKey.aiRepairContextLength, 4000)
-
-    val aiRepairTimeoutMs: Long
-        get() = appCtx.getPrefLong(PreferKey.aiRepairTimeout, 30000L)
-
-    val aiRepairRetryCount: Int
-        get() = appCtx.getPrefInt(PreferKey.aiRepairRetryCount, 2)
-
-    val aiRepairRetryDelayMs: Long
-        get() = appCtx.getPrefLong(PreferKey.aiRepairRetryDelay, 1000L)
-
-    val aiRepairSystemPrompt: String?
-        get() = appCtx.getPrefString(PreferKey.aiRepairSystemPrompt)
     val isTransparentStatusBar: Boolean
         get() = appCtx.getPrefBoolean(PreferKey.transparentStatusBar, true)
 
