@@ -3,6 +3,7 @@ package io.legado.app.ai
 import io.legado.app.help.config.AppConfig
 import io.legado.app.help.http.okHttpClient
 import io.legado.app.utils.GSON
+import io.legado.app.utils.fromJsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
