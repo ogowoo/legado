@@ -11,14 +11,19 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 
 object ContentRepairService {
-
     suspend fun repair(previousContext: String, paragraph: String): String =
         withContext(Dispatchers.IO) {
             if (!AppConfig.aiContentRepairEnabled) return@withContext paragraph
             val apiKey = AppConfig.aiRepairApiKey ?: return@withContext paragraph
+
             try {
                 val systemPrompt = "你是一个专业的文本校对助手，收到前文上下文和当前段落后，修复当前段落里出现的错乱、错字、错序，使其成为通顺、连贯的中文段落。只返回修正后的段落内容，不要带额外说明。"
-                val userContent = "前文上下文:\n" + previousContext.takeLast(4000) + "\n---\n当前段落:\n" + paragraph
+                val userContent = "前文上下文:
+" + previousContext.takeLast(4000) + "
+---
+当前段落:
+" + paragraph
+
                 val payload = GSON.toJson(mapOf(
                     "model" to "gpt-3.5-turbo",
                     "messages" to listOf(
