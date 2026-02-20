@@ -1,17 +1,16 @@
 name: Release Build
 
 on:
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - 'CHANGELOG.md'
+  push:
+    branches:
+      - master
+    paths:
+      - 'CHANGELOG.md'
   workflow_dispatch:
 
 jobs:
   prepare:
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
     outputs:
       version: ${{ steps.set-ver.outputs.version }}
       play: ${{ steps.check.outputs.play }}
@@ -31,7 +30,6 @@ jobs:
 
   build:
     needs: prepare
-    if: ${{ needs.prepare.outputs.sign }}
     strategy:
       matrix:
         product: [ app, google ]
@@ -52,8 +50,6 @@ jobs:
 
       - name: Release Apk Sign
         run: |
-          # not use this output
-          # echo "KeyStore=yes" >> $GITHUB_OUTPUT
           echo -e "\n" >> gradle.properties
           echo RELEASE_KEY_ALIAS='${{ secrets.RELEASE_KEY_ALIAS }}' >> gradle.properties
           echo RELEASE_KEY_PASSWORD='${{ secrets.RELEASE_KEY_PASSWORD }}' >> gradle.properties
