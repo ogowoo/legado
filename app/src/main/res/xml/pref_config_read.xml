@@ -95,6 +95,20 @@
         app:isBottomBackground="true" />
 
     <io.legado.app.lib.prefs.SwitchPreference
+        android:defaultValue="false"
+        android:key="aiContentRepair"
+        android:title="@string/ai_content_repair"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+    <io.legado.app.lib.prefs.EditTextPreference
+        android:key="aiRepairApiKey"
+        android:title="@string/ai_repair_api_key"
+        android:dialogTitle="@string/ai_repair_api_key"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+    <io.legado.app.lib.prefs.SwitchPreference
         android:defaultValue="true"
         android:key="mouseWheelPage"
         android:title="@string/mouse_wheel_page"

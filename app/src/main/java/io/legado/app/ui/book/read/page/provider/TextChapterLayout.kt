@@ -18,6 +18,7 @@ import io.legado.app.help.book.BookContent
 import io.legado.app.help.book.BookHelp
 import io.legado.app.help.book.getBookSource
 import io.legado.app.help.config.AppConfig
+import io.legado.app.ai.ContentRepairService
 import io.legado.app.help.config.ReadBookConfig
 import io.legado.app.help.coroutine.Coroutine
 import io.legado.app.model.ImageProvider
@@ -346,6 +347,13 @@ class TextChapterLayout(
                 }
             }
             var text = content.replace(srcReplaceCharC, srcReplaceCharD)
+            if (AppConfig.aiContentRepairEnabled) {
+                try {
+                    text = ContentRepairService.repair(stringBuilder.toString(), text)
+                } catch (e: Exception) {
+                    // ignore and fallback to original text
+                }
+            }
             if (isTextImageStyle) {
                 //图片样式为文字嵌入类型
                 val srcList = LinkedList<String>()

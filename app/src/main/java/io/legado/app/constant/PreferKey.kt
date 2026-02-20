@@ -124,6 +124,8 @@ object PreferKey {
     const val nightBrightness = "nightBrightness"
     const val expandTextMenu = "expandTextMenu"
     const val doublePageHorizontal = "doubleHorizontalPage"
+    const val aiContentRepair = "aiContentRepair"
+    const val aiRepairApiKey = "aiRepairApiKey"
     const val readUrlOpenInBrowser = "readUrlInBrowser"
     const val defaultBookTreeUri = "defaultBookTreeUri"
     const val checkSource = "checkSource"
