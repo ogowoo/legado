@@ -1343,4 +1343,53 @@
     <string name="invalid_file_path">文件路径无效</string>
     <string name="is_system_tts_no_export">无法导出系统tts</string>
     <string name="click_image_way">点击图片方式</string>
+    <string name="ai_content_repair">AI 内容修复</string>
+    <string name="ai_content_repair_summary">使用 AI 自动纠正小说中的错乱文字</string>
+    <string name="ai_content_repair_cache">启用修复缓存</string>
+    <string name="ai_content_repair_cache_summary">缓存修复结果，减少 API 调用次数</string>
+    <string name="ai_repair_provider">AI 提供商</string>
+    <string name="ai_repair_provider_summary">选择使用的 AI 服务提供商</string>
+    <string name="ai_repair_api_key">API Key</string>
+    <string name="ai_repair_api_key_summary">输入您的 API 密钥</string>
+    <string name="ai_repair_api_url">自定义 API 地址</string>
+    <string name="ai_repair_api_url_summary">留空使用默认地址</string>
+    <string name="ai_repair_model">模型</string>
+    <string name="ai_repair_model_summary">选择使用的 AI 模型</string>
+    <string name="ai_repair_temperature">创造性 (Temperature)</string>
+    <string name="ai_repair_temperature_summary">值越高创造性越强，越低越保守</string>
+    <string name="ai_repair_max_tokens">最大输出长度</string>
+    <string name="ai_repair_max_tokens_summary">单次修复的最大字符数</string>
+    <string name="ai_repair_context_length">上下文长度</string>
+    <string name="ai_repair_context_length_summary">参考的前文字符数</string>
+    <string name="ai_repair_timeout">请求超时</string>
+    <string name="ai_repair_timeout_summary">API 请求超时时间</string>
+    <string name="ai_repair_retry_count">重试次数</string>
+    <string name="ai_repair_retry_count_summary">请求失败时的重试次数</string>
+    <string name="ai_repair_retry_delay">重试延迟</string>
+    <string name="ai_repair_retry_delay_summary">每次重试之间的间隔</string>
+    <string name="ai_repair_system_prompt">系统提示词</string>
+    <string name="ai_repair_system_prompt_summary">自定义 AI 修复的行为</string>
+    <string name="ai_repair_stats">修复统计</string>
+    <string name="ai_repair_stats_summary">查看 AI 修复功能的使用统计</string>
+    <string name="ai_repair_clear_cache">清除修复缓存</string>
+    <string name="ai_repair_clear_cache_summary">清除所有已缓存的修复结果</string>
+    <string name="ai_repair_help">使用帮助</string>
+    <string name="ai_repair_help_summary">了解如何配置 AI 内容修复功能</string>
+    <string name="ai_repair_error_no_api_key">请先在设置中配置 API Key</string>
+
+    <string-array name="ai_provider_entries">
+        <item>OpenAI (GPT)</item>
+        <item>Google Gemini</item>
+        <item>Anthropic Claude</item>
+        <item>DeepSeek</item>
+        <item>自定义 API</item>
+    </string-array>
+
+    <string-array name="ai_provider_values">
+        <item>OPENAI</item>
+        <item>GEMINI</item>
+        <item>CLAUDE</item>
+        <item>DEEPSEEK</item>
+        <item>CUSTOM</item>
+    </string-array>
 </resources>
