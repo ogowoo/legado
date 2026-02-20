@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <io.legado.app.lib.prefs.SwitchPreference
+        android:defaultValue="false"
+        android:key="aiContentRepair"
+        android:title="@string/ai_content_repair"
+        android:summary="@string/ai_content_repair_summary"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+    <io.legado.app.lib.prefs.NameListPreference
+        android:defaultValue="OPENAI"
+        android:entries="@array/ai_provider_entries"
+        android:entryValues="@array/ai_provider_values"
+        android:key="aiRepairProviderType"
+        android:title="@string/ai_repair_provider"
+        android:summary="@string/ai_repair_provider_summary"
+        android:dependency="aiContentRepair"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+    <io.legado.app.lib.prefs.EditTextPreference
+        android:key="aiRepairApiKey"
+        android:title="@string/ai_repair_api_key"
+        android:summary="@string/ai_repair_api_key_summary"
+        android:dialogTitle="@string/ai_repair_api_key"
+        android:inputType="textPassword"
+        android:dependency="aiContentRepair"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+    <io.legado.app.lib.prefs.EditTextPreference
+        android:key="aiRepairApiUrl"
+        android:title="@string/ai_repair_api_url"
+        android:summary="@string/ai_repair_api_url_summary"
+        android:dialogTitle="@string/ai_repair_api_url"
+        android:inputType="textUri"
+        android:dependency="aiContentRepair"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+    <io.legado.app.lib.prefs.EditTextPreference
+        android:key="aiRepairModel"
+        android:title="@string/ai_repair_model"
+        android:summary="@string/ai_repair_model_summary"
+        android:dialogTitle="@string/ai_repair_model"
+        android:dependency="aiContentRepair"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+    <io.legado.app.lib.prefs.SwitchPreference
+        android:defaultValue="true"
+        android:key="aiContentRepairCache"
+        android:title="@string/ai_content_repair_cache"
+        android:summary="@string/ai_content_repair_cache_summary"
+        android:dependency="aiContentRepair"
+        app:iconSpaceReserved="false"
+        app:isBottomBackground="true" />
+
+</androidx.preference.PreferenceScreen>
