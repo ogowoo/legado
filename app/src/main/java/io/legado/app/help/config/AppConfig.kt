@@ -258,7 +258,6 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
 
     val aiRepairSystemPrompt: String?
         get() = appCtx.getPrefString(PreferKey.aiRepairSystemPrompt)
-        get() = appCtx.getPrefString(PreferKey.aiRepairApiKey)
     val isTransparentStatusBar: Boolean
         get() = appCtx.getPrefBoolean(PreferKey.transparentStatusBar, true)
 
