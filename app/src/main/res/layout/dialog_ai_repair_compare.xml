@@ -90,23 +90,23 @@
         android:orientation="horizontal"
         android:gravity="end">
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/btn_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="关闭"
             android:textSize="14sp"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_marginEnd="8dp" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/btn_apply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="应用修正"
             android:textSize="14sp"
             android:textColor="@color/background"
-            app:backgroundTint="@color/accent" />
+            android:backgroundTint="@color/accent" />
     </LinearLayout>
 
 </LinearLayout>
