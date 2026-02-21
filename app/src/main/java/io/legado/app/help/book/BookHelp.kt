@@ -396,8 +396,28 @@ object BookHelp {
 
     /**
      * 读取章节内容
+     * 优先读取AI修正缓存，如果没有则读取原始内容
      */
     fun getContent(book: Book, bookChapter: BookChapter): String? {
+        // 优先检查AI修正缓存
+        val aiCache = appDb.aiRepairCacheDao.get(book.bookUrl, bookChapter.index)
+        if (aiCache != null) {
+            // 获取原始内容用于验证
+            val originalContent = getOriginalContent(book, bookChapter)
+            if (originalContent != null && aiCache.isValid(originalContent)) {
+                return aiCache.repairedContent
+            } else {
+                // 原始内容已变化，删除无效缓存
+                appDb.aiRepairCacheDao.delete(book.bookUrl, bookChapter.index)
+            }
+        }
+        return getOriginalContent(book, bookChapter)
+    }
+
+    /**
+     * 读取原始章节内容（不包含AI修正）
+     */
+    private fun getOriginalContent(book: Book, bookChapter: BookChapter): String? {
         val file = downloadDir.getFile(
             cacheFolderName,
             book.getFolderName(),

@@ -29,6 +29,7 @@ import io.legado.app.constant.EventBus
 import io.legado.app.constant.PreferKey
 import io.legado.app.constant.Status
 import io.legado.app.data.appDb
+import io.legado.app.data.entities.AiRepairCache
 import io.legado.app.data.entities.Book
 import io.legado.app.data.entities.BookChapter
 import io.legado.app.data.entities.BookProgress
@@ -1132,10 +1133,43 @@ class ReadBookActivity : BaseReadBookActivity(),
 
     /**
      * AI 修正应用回调
+     * 保存修正后的内容到缓存并刷新页面
      */
     override fun onAiRepairApply(repairedText: String) {
-        toastOnUi("已应用 AI 修正: $repairedText")
-        // 这里可以添加更多逻辑，比如刷新当前页面显示修正后的文本
+        lifecycleScope.launch {
+            try {
+                val book = ReadBook.book ?: return@launch
+                val chapterIndex = ReadBook.durChapterIndex
+                
+                // 获取当前章节
+                val chapter = appDb.bookChapterDao.getChapter(book.bookUrl, chapterIndex)
+                    ?: return@launch
+                
+                // 获取当前章节的原始内容
+                val originalContent = BookHelp.getContent(book, chapter)
+                if (originalContent != null) {
+                    // 创建AI修正缓存
+                    val cache = AiRepairCache(
+                        bookUrl = book.bookUrl,
+                        chapterIndex = chapter.index,
+                        chapterTitle = chapter.title,
+                        repairedContent = repairedText,
+                        originalHash = AiRepairCache.generateHash(originalContent),
+                        updateTime = System.currentTimeMillis()
+                    )
+                    appDb.aiRepairCacheDao.insert(cache)
+                    
+                    // 刷新当前页面显示修正后的内容
+                    ReadBook.loadContent(chapter.index, upContent = true)
+                    toastOnUi("AI修正已应用并保存")
+                } else {
+                    toastOnUi("保存失败：无法获取原始内容")
+                }
+            } catch (e: Exception) {
+                AppLog.put("AI修正应用失败: ${e.message}", e)
+                toastOnUi("应用失败: ${e.message}")
+            }
+        }
     }
 
     /**
