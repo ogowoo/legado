@@ -421,6 +421,13 @@ class PageView(context: Context) : FrameLayout(context) {
     }
 
     /**
+     * 获取当前段落文本（用于 AI 修正预览）
+     */
+    fun getCurrentParagraphText(x: Float, y: Float): Pair<String, String>? {
+        return binding.contentTextView.getCurrentParagraphText(x - imgBgPaddingStart, y - headerHeight)
+    }
+
+    /**
      * 选择文本
      */
     fun selectText(

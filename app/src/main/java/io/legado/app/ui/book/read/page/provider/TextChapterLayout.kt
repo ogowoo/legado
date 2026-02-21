@@ -347,7 +347,8 @@ class TextChapterLayout(
                 }
             }
             var text = content.replace(srcReplaceCharC, srcReplaceCharD)
-            if (AppConfig.aiContentRepairEnabled) {
+            // AI 自动修正模式（默认）
+            if (AppConfig.aiAutoRepairEnabled) {
                 try {
                     AppLog.put("AI内容修正开始: 段落长度=${text.length}")
                     val repairedText = ContentRepairService.repair(stringBuilder.toString(), text)

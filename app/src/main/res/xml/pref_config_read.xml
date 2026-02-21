@@ -108,6 +108,16 @@
             app:isBottomBackground="true" />
 
         <io.legado.app.lib.prefs.NameListPreference
+            android:defaultValue="1"
+            android:entries="@array/ai_repair_mode_title"
+            android:entryValues="@array/ai_repair_mode_value"
+            android:key="aiRepairMode"
+            android:summary="@string/ai_repair_mode_summary"
+            android:title="@string/ai_repair_mode"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.NameListPreference
             android:defaultValue="dashscope"
             android:entries="@array/ai_provider_title"
             android:entryValues="@array/ai_provider_value"

@@ -132,6 +132,7 @@ object PreferKey {
     const val aiRepairTemperature = "aiRepairTemperature"
     const val aiRepairMaxTokens = "aiRepairMaxTokens"
     const val aiRepairSystemPrompt = "aiRepairSystemPrompt"
+    const val aiRepairMode = "aiRepairMode"
     const val readUrlOpenInBrowser = "readUrlInBrowser"
     const val defaultBookTreeUri = "defaultBookTreeUri"
     const val checkSource = "checkSource"

@@ -238,6 +238,37 @@ class ContentTextView(context: Context, attrs: AttributeSet?) : View(context, at
     }
 
     /**
+     * 获取当前段落文本（用于 AI 修正预览）
+     */
+    fun getCurrentParagraphText(x: Float, y: Float): Pair<String, String>? {
+        var result: Pair<String, String>? = null
+        touch(x, y) { _, textPos, textPage, _, column ->
+            if (column is TextColumn || column is TextHtmlColumn) {
+                // 获取当前段落文本
+                val paragraphText = StringBuilder()
+                val contextText = StringBuilder()
+                
+                // 获取上下文（前一段）
+                for (index in textPos.lineIndex - 1 downTo 0) {
+                    val line = textPage.getLine(index)
+                    contextText.insert(0, line.text)
+                    if (line.isParagraphEnd) break
+                }
+                
+                // 获取当前段落
+                for (index in textPos.lineIndex until textPage.lineSize) {
+                    val line = textPage.getLine(index)
+                    paragraphText.append(line.text)
+                    if (line.isParagraphEnd) break
+                }
+                
+                result = paragraphText.toString() to contextText.toString()
+            }
+        }
+        return result
+    }
+
+    /**
      * 单击
      * @return true:已处理, false:未处理
      */

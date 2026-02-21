@@ -869,5 +869,26 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
     val aiRepairSystemPrompt: String?
         get() = appCtx.getPrefString(PreferKey.aiRepairSystemPrompt)
 
+    /**
+     * AI 修正模式
+     * 0 = 禁用
+     * 1 = 自动修正（默认）
+     * 2 = 长按预览
+     */
+    val aiRepairMode: Int
+        get() = appCtx.getPrefInt(PreferKey.aiRepairMode, 1)
+
+    /**
+     * 是否启用 AI 自动修正
+     */
+    val aiAutoRepairEnabled: Boolean
+        get() = aiContentRepairEnabled && aiRepairMode == 1
+
+    /**
+     * 是否启用 AI 长按预览
+     */
+    val aiLongPressRepairEnabled: Boolean
+        get() = aiContentRepairEnabled && aiRepairMode == 2
+
 }
 

@@ -126,6 +126,13 @@
     <string name="ai_repair_max_tokens_summary">Maximum length of generated text (default 512)</string>
     <string name="ai_repair_system_prompt">System Prompt</string>
     <string name="ai_repair_system_prompt_summary">Optional: Customize the AI character and task description</string>
+    <string name="ai_repair_mode">AI Repair Mode</string>
+    <string name="ai_repair_mode_summary">Select auto repair or long-press preview mode</string>
+    <string name="ai_repair_mode_disabled">Disabled</string>
+    <string name="ai_repair_mode_auto">Auto Repair</string>
+    <string name="ai_repair_mode_preview">Long-Press Preview</string>
+    <string name="ai_repair_preview">AI Repair Preview</string>
+    <string name="ai_repair_preview_summary">Long press text to preview AI repair effect</string>
     <string name="pt_auto_refresh">Auto-refresh</string>
     <string name="ps_auto_refresh">Update books automatically when opening the software</string>
     <string name="pt_auto_download">Auto-download</string>

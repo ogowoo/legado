@@ -163,7 +163,8 @@ class ReadBookActivity : BaseReadBookActivity(),
     AutoReadDialog.CallBack,
     TxtTocRuleDialog.CallBack,
     ColorPickerDialogListener,
-    LayoutProgressListener {
+    LayoutProgressListener,
+    AiRepairCompareDialog.CallBack {
 
     private val tocActivity =
         registerForActivityResult(TocActivityResult()) {
@@ -1127,6 +1128,14 @@ class ReadBookActivity : BaseReadBookActivity(),
             isShowingSearchResult -> binding.searchMenu.runMenuIn()
             else -> binding.readMenu.runMenuIn()
         }
+    }
+
+    /**
+     * AI 修正应用回调
+     */
+    override fun onAiRepairApply(repairedText: String) {
+        toastOnUi("已应用 AI 修正: $repairedText")
+        // 这里可以添加更多逻辑，比如刷新当前页面显示修正后的文本
     }
 
     /**

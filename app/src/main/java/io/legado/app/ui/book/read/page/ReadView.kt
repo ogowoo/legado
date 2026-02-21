@@ -317,6 +317,11 @@ class ReadView(context: Context, attrs: AttributeSet) :
      * 长按选择
      */
     private fun onLongPress() {
+        // AI 长按预览模式
+        if (AppConfig.aiLongPressRepairEnabled) {
+            showAiRepairPreview()
+            return
+        }
         kotlin.runCatching {
             curPage.longPress(startX, startY) { textPos: TextPos ->
                 isTextSelected = true
@@ -383,6 +388,22 @@ class ReadView(context: Context, attrs: AttributeSet) :
                 }
                 curPage.selectStartMoveIndex(startPos)
                 curPage.selectEndMoveIndex(endPos)
+            }
+        }
+    }
+
+    /**
+     * 显示 AI 修正预览
+     */
+    private fun showAiRepairPreview() {
+        kotlin.runCatching {
+            // 获取当前位置的文本
+            curPage.getCurrentParagraphText(startX, startY)?.let { (text, context) ->
+                if (text.isNotBlank()) {
+                    activity?.showDialogFragment(
+                        io.legado.app.ui.book.read.AiRepairCompareDialog.newInstance(text, context)
+                    )
+                }
             }
         }
     }
