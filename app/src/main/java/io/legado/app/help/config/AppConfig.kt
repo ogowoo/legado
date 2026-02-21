@@ -221,11 +221,6 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
     val textSelectAble: Boolean
         get() = appCtx.getPrefBoolean(PreferKey.textSelectAble, true)
 
-    val aiContentRepairEnabled: Boolean
-        get() = appCtx.getPrefBoolean(PreferKey.aiContentRepair, false)
-
-    val aiRepairApiKey: String?
-        get() = appCtx.getPrefString(PreferKey.aiRepairApiKey)
     val isTransparentStatusBar: Boolean
         get() = appCtx.getPrefBoolean(PreferKey.transparentStatusBar, true)
 

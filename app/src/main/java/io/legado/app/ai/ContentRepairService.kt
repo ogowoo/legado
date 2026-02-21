@@ -42,7 +42,7 @@ object ContentRepairService {
                 AppConfig.aiRepairApiUrl
             } else {
                 provider.defaultApiUrl
-            }.takeIf { it.isNotBlank() } ?: return@withContext paragraph
+            }.takeIf { !it.isNullOrBlank() } ?: return@withContext paragraph
 
             // 获取模型
             val model = AppConfig.aiRepairModel?.takeIf { it.isNotBlank() }
