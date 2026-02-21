@@ -94,19 +94,80 @@
         app:iconSpaceReserved="false"
         app:isBottomBackground="true" />
 
-    <io.legado.app.lib.prefs.SwitchPreference
-        android:defaultValue="false"
-        android:key="aiContentRepair"
-        android:title="@string/ai_content_repair"
-        app:iconSpaceReserved="false"
-        app:isBottomBackground="true" />
+    <!-- AI 内容修正设置分组 -->
+    <io.legado.app.lib.prefs.PreferenceCategory
+        android:title="@string/ai_content_repair_category"
+        app:iconSpaceReserved="false">
 
-    <io.legado.app.lib.prefs.EditTextPreference
-        android:key="aiRepairApiKey"
-        android:title="@string/ai_repair_api_key"
-        android:dialogTitle="@string/ai_repair_api_key"
-        app:iconSpaceReserved="false"
-        app:isBottomBackground="true" />
+        <io.legado.app.lib.prefs.SwitchPreference
+            android:defaultValue="false"
+            android:key="aiContentRepair"
+            android:summary="@string/ai_content_repair_summary"
+            android:title="@string/ai_content_repair"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.NameListPreference
+            android:defaultValue="dashscope"
+            android:entries="@array/ai_provider_title"
+            android:entryValues="@array/ai_provider_value"
+            android:key="aiRepairProvider"
+            android:summary="@string/ai_provider_summary"
+            android:title="@string/ai_provider"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.EditTextPreference
+            android:key="aiRepairApiKey"
+            android:summary="@string/ai_repair_api_key_summary"
+            android:title="@string/ai_repair_api_key"
+            android:dialogTitle="@string/ai_repair_api_key"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.EditTextPreference
+            android:key="aiRepairApiUrl"
+            android:summary="@string/ai_repair_api_url_summary"
+            android:title="@string/ai_repair_api_url"
+            android:dialogTitle="@string/ai_repair_api_url"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.EditTextPreference
+            android:key="aiRepairModel"
+            android:summary="@string/ai_repair_model_summary"
+            android:title="@string/ai_repair_model"
+            android:dialogTitle="@string/ai_repair_model"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.EditTextPreference
+            android:defaultValue="0.2"
+            android:key="aiRepairTemperature"
+            android:summary="@string/ai_repair_temperature_summary"
+            android:title="@string/ai_repair_temperature"
+            android:dialogTitle="@string/ai_repair_temperature"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.EditTextPreference
+            android:defaultValue="512"
+            android:key="aiRepairMaxTokens"
+            android:summary="@string/ai_repair_max_tokens_summary"
+            android:title="@string/ai_repair_max_tokens"
+            android:dialogTitle="@string/ai_repair_max_tokens"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+        <io.legado.app.lib.prefs.EditTextPreference
+            android:key="aiRepairSystemPrompt"
+            android:summary="@string/ai_repair_system_prompt_summary"
+            android:title="@string/ai_repair_system_prompt"
+            android:dialogTitle="@string/ai_repair_system_prompt"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
+    </io.legado.app.lib.prefs.PreferenceCategory>
 
     <io.legado.app.lib.prefs.SwitchPreference
         android:defaultValue="true"

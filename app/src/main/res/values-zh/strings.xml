@@ -1236,4 +1236,23 @@
     <string name="auto_check_new_backup_t">自动检查新备份</string>
     <string name="auto_check_new_backup_s">打开软件时检查是否有新备份，有新备份时提示是否更新</string>
     <string name="sys_image_picker">系统图片选择器</string>
+    <!-- AI 内容修正 -->
+    <string name="ai_content_repair">AI内容修正</string>
+    <string name="ai_content_repair_summary">使用AI根据上下文自动纠正错字、乱序等问题</string>
+    <string name="ai_content_repair_category">AI内容修正设置</string>
+    <string name="ai_provider">AI提供商</string>
+    <string name="ai_provider_summary">选择AI服务商（推荐国内提供商）</string>
+    <string name="ai_repair_api_key">API密钥</string>
+    <string name="ai_repair_api_key_summary">填写所选提供商的API密钥</string>
+    <string name="ai_repair_api_url">自定义API地址</string>
+    <string name="ai_repair_api_url_summary">可选：填写自定义API地址（用于自定义OpenAI兼容）</string>
+    <string name="ai_repair_model">模型名称</string>
+    <string name="ai_repair_model_summary">可选：填写自定义模型名称（留空使用默认）</string>
+    <string name="ai_repair_temperature">温度参数</string>
+    <string name="ai_repair_temperature_summary">创造性参数(0.0-2.0，默认0.2，越低越稳定)</string>
+    <string name="ai_repair_max_tokens">最大Token数</string>
+    <string name="ai_repair_max_tokens_summary">生成文本的最大长度(默认512)</string>
+    <string name="ai_repair_system_prompt">系统提示词</string>
+    <string name="ai_repair_system_prompt_summary">可选：自定义AI角色和任务描述</string>
+
 </resources>

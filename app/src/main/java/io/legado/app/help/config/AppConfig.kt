@@ -826,5 +826,53 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
             appCtx.putPrefBoolean(PreferKey.welcomeShowIconDark, value)
         }
 
+    // ==================== AI 内容修正配置 ====================
+
+    val aiContentRepairEnabled: Boolean
+        get() = appCtx.getPrefBoolean(PreferKey.aiContentRepair, false)
+
+    /**
+     * AI 提供商 ID
+     * 可选值: openai, dashscope, deepseek, zhipu, baidu, custom_openai
+     */
+    val aiRepairProvider: String
+        get() = appCtx.getPrefString(PreferKey.aiRepairProvider) ?: "dashscope"
+
+    /**
+     * API Key
+     */
+    val aiRepairApiKey: String?
+        get() = appCtx.getPrefString(PreferKey.aiRepairApiKey)
+
+    /**
+     * 自定义 API URL（用于自定义 OpenAI 兼容接口）
+     */
+    val aiRepairApiUrl: String?
+        get() = appCtx.getPrefString(PreferKey.aiRepairApiUrl)
+
+    /**
+     * 模型名称
+     */
+    val aiRepairModel: String?
+        get() = appCtx.getPrefString(PreferKey.aiRepairModel)
+
+    /**
+     * 温度参数 (0.0 - 2.0)
+     */
+    val aiRepairTemperature: String?
+        get() = appCtx.getPrefString(PreferKey.aiRepairTemperature) ?: "0.2"
+
+    /**
+     * 最大 Token 数
+     */
+    val aiRepairMaxTokens: String?
+        get() = appCtx.getPrefString(PreferKey.aiRepairMaxTokens) ?: "512"
+
+    /**
+     * 自定义系统提示词
+     */
+    val aiRepairSystemPrompt: String?
+        get() = appCtx.getPrefString(PreferKey.aiRepairSystemPrompt)
+
 }
 

@@ -108,8 +108,24 @@
     <string name="version_name">Version %s</string>
     <string name="pt_background_verification">Background-verification</string>
     <string name="ps_background_verification">you can operate freely when verifying the book source</string>
+    <!-- AI 内容修正 -->
     <string name="ai_content_repair">AI content repair</string>
-    <string name="ai_repair_api_key">AI repair API key</string>
+    <string name="ai_content_repair_summary">Use AI to automatically correct errors and typos based on context</string>
+    <string name="ai_content_repair_category">AI Content Repair Settings</string>
+    <string name="ai_provider">AI Provider</string>
+    <string name="ai_provider_summary">Select AI service provider (domestic providers recommended)</string>
+    <string name="ai_repair_api_key">API Key</string>
+    <string name="ai_repair_api_key_summary">Enter the API Key of the selected provider</string>
+    <string name="ai_repair_api_url">Custom API URL</string>
+    <string name="ai_repair_api_url_summary">Optional: Enter a custom API address (for custom OpenAI compatible)</string>
+    <string name="ai_repair_model">Model Name</string>
+    <string name="ai_repair_model_summary">Optional: Enter a custom model name (leave blank for default)</string>
+    <string name="ai_repair_temperature">Temperature</string>
+    <string name="ai_repair_temperature_summary">Creativity parameter (0.0-2.0, default 0.2, lower is more stable)</string>
+    <string name="ai_repair_max_tokens">Max Tokens</string>
+    <string name="ai_repair_max_tokens_summary">Maximum length of generated text (default 512)</string>
+    <string name="ai_repair_system_prompt">System Prompt</string>
+    <string name="ai_repair_system_prompt_summary">Optional: Customize the AI character and task description</string>
     <string name="pt_auto_refresh">Auto-refresh</string>
     <string name="ps_auto_refresh">Update books automatically when opening the software</string>
     <string name="pt_auto_download">Auto-download</string>
