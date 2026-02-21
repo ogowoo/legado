@@ -317,9 +317,8 @@ class ReadView(context: Context, attrs: AttributeSet) :
      * 长按选择
      */
     private fun onLongPress() {
-        // AI 长按预览模式
-        if (AppConfig.aiLongPressRepairEnabled) {
-            showAiRepairPreview()
+        // AI 长按预览模式 - 优先尝试 AI 预览，失败则回退到文字选择
+        if (AppConfig.aiLongPressRepairEnabled && showAiRepairPreview()) {
             return
         }
         kotlin.runCatching {
@@ -394,17 +393,21 @@ class ReadView(context: Context, attrs: AttributeSet) :
 
     /**
      * 显示 AI 修正预览
+     * @return 是否成功显示对话框
      */
-    private fun showAiRepairPreview() {
-        kotlin.runCatching {
+    private fun showAiRepairPreview(): Boolean {
+        return try {
             // 获取当前位置的文本
-            curPage.getCurrentParagraphText(startX, startY)?.let { (text, context) ->
-                if (text.isNotBlank()) {
-                    activity?.showDialogFragment(
-                        io.legado.app.ui.book.read.AiRepairCompareDialog.newInstance(text, context)
-                    )
-                }
-            }
+            val (text, context) = curPage.getCurrentParagraphText(startX, startY)
+                ?: return false
+            if (text.isBlank()) return false
+            
+            activity?.showDialogFragment(
+                io.legado.app.ui.book.read.AiRepairCompareDialog.newInstance(text, context)
+            )
+            true
+        } catch (e: Exception) {
+            false
         }
     }
 
