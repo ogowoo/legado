@@ -226,7 +226,10 @@
         <item>智谱 AI (GLM) - 有免费额度</item>
         <item>DeepSeek - 价格低，中文好</item>
         <item>百度千帆 (文心一言) - 有免费额度</item>
+        <item>SiliconFlow (硅基流动) - 国内，多种免费模型</item>
+        <item>Groq - 超快响应，有免费额度</item>
         <item>NVIDIA NIM - 多种开源模型</item>
+        <item>Together AI - 开源模型集合</item>
         <item>OpenAI 官方</item>
         <item>自定义 OpenAI 兼容</item>
     </string-array>
@@ -235,7 +238,10 @@
         <item>zhipu</item>
         <item>deepseek</item>
         <item>baidu</item>
+        <item>siliconflow</item>
+        <item>groq</item>
         <item>nvidia</item>
+        <item>together</item>
         <item>openai</item>
         <item>custom_openai</item>
     </string-array>
