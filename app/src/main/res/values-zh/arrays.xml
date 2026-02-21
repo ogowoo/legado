@@ -122,6 +122,11 @@
         <item>自动修正</item>
         <item>长按预览</item>
     </string-array>
+    <string-array name="ai_repair_mode_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
 
     <!-- AI 内容修正 - 提供商选项 -->
     <string-array name="ai_provider_title">
