@@ -244,7 +244,7 @@ class ContentTextView(context: Context, attrs: AttributeSet?) : View(context, at
      */
     fun getCurrentParagraphText(x: Float, y: Float): Pair<String, String>? {
         var result: Pair<String, String>? = null
-        touch(x, y) { _, _, textPage, _, column ->
+        touch(x, y) { _, textPos, textPage, _, column ->
             if (column is TextColumn || column is TextHtmlColumn) {
                 // 获取整个页面的文本
                 val pageText = textPage.text ?: ""
