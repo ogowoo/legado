@@ -33,7 +33,24 @@ android {
     }
 
     signingConfigs {
-        if (project.hasProperty("RELEASE_STORE_FILE")) {
+        // 从 signing.properties 文件读取签名配置
+        def signingPropsFile = rootProject.file('keystore/signing.properties')
+        if (signingPropsFile.exists()) {
+            def props = new Properties()
+            props.load(new FileInputStream(signingPropsFile))
+            
+            myConfig {
+                storeFile file(props['STORE_FILE'])
+                storePassword props['STORE_PASSWORD']
+                keyAlias props['KEY_ALIAS']
+                keyPassword props['KEY_PASSWORD']
+                enableV1Signing = true
+                enableV2Signing = true
+                enableV3Signing = true
+                enableV4Signing = true
+            }
+        } else if (project.hasProperty("RELEASE_STORE_FILE")) {
+            // 兼容旧的项目属性配置方式
             myConfig {
                 storeFile file(RELEASE_STORE_FILE)
                 storePassword RELEASE_STORE_PASSWORD
