@@ -284,6 +284,10 @@ class ChangeBookSourceDialog() : BaseDialogFragment(R.layout.dialog_book_change_
             lifecycle.currentStateFlow.first { it.isAtLeast(STARTED) }
             viewModel.searchDataFlow.conflate().collect {
                 adapter.setItems(it)
+                // 有搜索结果时显示"使用最优源"按钮
+                if (it.isNotEmpty()) {
+                    binding.tvBestSource.visibility = View.VISIBLE
+                }
                 delay(1000)
             }
         }
