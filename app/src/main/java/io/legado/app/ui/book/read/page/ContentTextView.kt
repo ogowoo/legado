@@ -7,8 +7,8 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import io.legado.app.R
-import io.legado.app.ai.ContentFilter
 import io.legado.app.data.entities.Bookmark
+import io.legado.app.help.book.BookHelp
 import io.legado.app.help.book.isOnLineTxt
 import io.legado.app.help.config.AppConfig
 import io.legado.app.model.ReadBook
@@ -239,18 +239,23 @@ class ContentTextView(context: Context, attrs: AttributeSet?) : View(context, at
     }
 
     /**
-     * 获取当前窗口/页面文本（用于 AI 修正预览）
-     * 返回整个可见窗口的内容，并过滤无意义内容
+     * 获取当前章节的原始内容（用于 AI 修正预览）
+     * 返回未经替换净化处理的原始文本
      */
     fun getCurrentParagraphText(x: Float, y: Float): Pair<String, String>? {
         var result: Pair<String, String>? = null
         touch(x, y) { _, textPos, textPage, _, column ->
             if (column is TextColumn || column is TextHtmlColumn) {
-                // 获取整个页面的文本
-                val pageText = textPage.text ?: ""
-                // 过滤无意义内容
-                val filteredText = ContentFilter.filter(pageText)
-                result = filteredText to ""
+                // 获取当前章节的原始内容（未经处理）
+                val book = ReadBook.book
+                val chapter = ReadBook.curTextChapter?.chapter
+                if (book != null && chapter != null) {
+                    // 直接读取原始文件内容，不经过替换净化
+                    val originalContent = BookHelp.getOriginalContent(book, chapter)
+                    result = (originalContent ?: textPage.text ?: "") to ""
+                } else {
+                    result = (textPage.text ?: "") to ""
+                }
             }
         }
         return result

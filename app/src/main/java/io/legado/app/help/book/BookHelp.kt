@@ -415,9 +415,9 @@ object BookHelp {
     }
 
     /**
-     * 读取原始章节内容（不包含AI修正）
+     * 读取原始章节内容（不包含AI修正和替换净化）
      */
-    private fun getOriginalContent(book: Book, bookChapter: BookChapter): String? {
+    fun getOriginalContent(book: Book, bookChapter: BookChapter): String? {
         val file = downloadDir.getFile(
             cacheFolderName,
             book.getFolderName(),
