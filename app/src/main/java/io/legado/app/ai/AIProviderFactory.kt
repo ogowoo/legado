@@ -4,6 +4,7 @@ import io.legado.app.ai.providers.BaiduProvider
 import io.legado.app.ai.providers.CustomOpenAIProvider
 import io.legado.app.ai.providers.DashScopeProvider
 import io.legado.app.ai.providers.DeepSeekProvider
+import io.legado.app.ai.providers.NvidiaProvider
 import io.legado.app.ai.providers.OpenAIProvider
 import io.legado.app.ai.providers.ZhipuProvider
 
@@ -18,6 +19,7 @@ object AIProviderFactory {
         DeepSeekProvider(),       // DeepSeek
         ZhipuProvider(),          // 智谱 AI
         BaiduProvider(),          // 百度千帆
+        NvidiaProvider(),         // NVIDIA NIM
         CustomOpenAIProvider()    // 自定义 OpenAI 兼容
     )
     
