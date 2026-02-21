@@ -876,7 +876,7 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
      * 2 = 长按预览
      */
     val aiRepairMode: Int
-        get() = appCtx.getPrefInt(PreferKey.aiRepairMode, 1)
+        get() = appCtx.getPrefString(PreferKey.aiRepairMode, "1")?.toIntOrNull() ?: 1
 
     /**
      * 是否启用 AI 自动修正
