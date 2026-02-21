@@ -1261,6 +1261,11 @@
     <string name="ai_generate_rules">智能生成替换规则</string>
     <string name="ai_generate_rules_summary">从AI修正结果自动生成替换净化规则</string>
     <string name="ai_rules_saved">AI规则保存成功</string>
+    <string name="ai_optimize_rules">AI优化规则</string>
+    <string name="ai_optimize_rules_summary">使用AI分析并合并相似规则</string>
+    <string name="ai_optimizing">AI正在分析优化规则...</string>
+    <string name="ai_optimize_complete">优化完成，合并了%d条规则</string>
+    <string name="ai_optimize_no_change">暂无优化建议</string>
     <string name="ai_repair_mode">AI修正模式</string>
     <string name="ai_repair_mode_summary">选择自动修正或长按预览模式</string>
     <string name="ai_repair_mode_disabled">禁用</string>

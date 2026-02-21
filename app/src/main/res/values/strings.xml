@@ -133,6 +133,11 @@
     <string name="ai_generate_rules">Generate Replace Rules</string>
     <string name="ai_generate_rules_summary">Auto-generate replacement rules from AI repair</string>
     <string name="ai_rules_saved">AI rules saved successfully</string>
+    <string name="ai_optimize_rules">AI Optimize Rules</string>
+    <string name="ai_optimize_rules_summary">Use AI to analyze and merge similar rules</string>
+    <string name="ai_optimizing">AI is analyzing and optimizing rules...</string>
+    <string name="ai_optimize_complete">Optimization complete, %d rules merged</string>
+    <string name="ai_optimize_no_change">No optimization suggestions</string>
     <string name="ai_repair_mode">AI Repair Mode</string>
     <string name="ai_repair_mode_summary">Select auto repair or long-press preview mode</string>
     <string name="ai_repair_mode_disabled">Disabled</string>

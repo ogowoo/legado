@@ -26,6 +26,7 @@ import io.legado.app.lib.dialogs.alert
 import io.legado.app.lib.theme.primaryColor
 import io.legado.app.lib.theme.primaryTextColor
 import io.legado.app.ui.association.ImportReplaceRuleDialog
+import io.legado.app.ui.replace.AiOptimizeDialog
 import io.legado.app.ui.file.HandleFileContract
 import io.legado.app.ui.qrcode.QrCodeResult
 import io.legado.app.ui.replace.edit.ReplaceEditActivity
@@ -238,6 +239,7 @@ class ReplaceRuleActivity : VMBaseActivity<ActivityReplaceRuleBinding, ReplaceRu
         when (item.itemId) {
             R.id.menu_add_replace_rule ->
                 editActivity.launch(ReplaceEditActivity.startIntent(this))
+            R.id.menu_ai_optimize -> showDialogFragment<AiOptimizeDialog>()
             R.id.menu_group_manage -> showDialogFragment<GroupManageDialog>()
             R.id.menu_enabled_group -> {
                 searchView.setQuery(getString(R.string.enabled), true)

@@ -37,6 +37,12 @@
     </item>
 
     <item
+        android:id="@+id/menu_ai_optimize"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/ai_optimize_rules"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/menu_add_replace_rule"
         android:icon="@drawable/ic_add"
         android:title="@string/add_replace_rule"
