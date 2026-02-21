@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import io.legado.app.R
+import io.legado.app.ai.ContentFilter
 import io.legado.app.data.entities.Bookmark
 import io.legado.app.help.book.isOnLineTxt
 import io.legado.app.help.config.AppConfig
@@ -238,31 +239,18 @@ class ContentTextView(context: Context, attrs: AttributeSet?) : View(context, at
     }
 
     /**
-     * 获取当前段落文本（用于 AI 修正预览）
+     * 获取当前窗口/页面文本（用于 AI 修正预览）
+     * 返回整个可见窗口的内容，并过滤无意义内容
      */
     fun getCurrentParagraphText(x: Float, y: Float): Pair<String, String>? {
         var result: Pair<String, String>? = null
-        touch(x, y) { _, textPos, textPage, _, column ->
+        touch(x, y) { _, _, textPage, _, column ->
             if (column is TextColumn || column is TextHtmlColumn) {
-                // 获取当前段落文本
-                val paragraphText = StringBuilder()
-                val contextText = StringBuilder()
-                
-                // 获取上下文（前一段）
-                for (index in textPos.lineIndex - 1 downTo 0) {
-                    val line = textPage.getLine(index)
-                    contextText.insert(0, line.text)
-                    if (line.isParagraphEnd) break
-                }
-                
-                // 获取当前段落
-                for (index in textPos.lineIndex until textPage.lineSize) {
-                    val line = textPage.getLine(index)
-                    paragraphText.append(line.text)
-                    if (line.isParagraphEnd) break
-                }
-                
-                result = paragraphText.toString() to contextText.toString()
+                // 获取整个页面的文本
+                val pageText = textPage.text ?: ""
+                // 过滤无意义内容
+                val filteredText = ContentFilter.filter(pageText)
+                result = filteredText to ""
             }
         }
         return result
