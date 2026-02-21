@@ -91,7 +91,8 @@ android {
     }
     buildTypes {
         release {
-            if (project.hasProperty("RELEASE_STORE_FILE")) {
+            // 应用签名配置（如果存在）
+            if (signingConfigs.hasProperty('myConfig')) {
                 signingConfig signingConfigs.myConfig
             }
             applicationIdSuffix '.release'
@@ -108,7 +109,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', 'cronet-proguard-rules.pro'
         }
         debug {
-            if (project.hasProperty("RELEASE_STORE_FILE")) {
+            // 应用签名配置（如果存在）
+            if (signingConfigs.hasProperty('myConfig')) {
                 signingConfig signingConfigs.myConfig
             }
             manifestPlaceholders.put("app_name", "@string/app_name")
