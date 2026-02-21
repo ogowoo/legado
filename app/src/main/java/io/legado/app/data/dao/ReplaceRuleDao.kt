@@ -89,6 +89,12 @@ interface ReplaceRuleDao {
     @Query("UPDATE replace_rules SET isEnabled = :enable")
     fun enableAll(enable: Boolean)
 
+    @Query("UPDATE replace_rules SET isEnabled = :enable WHERE `group` = :group")
+    fun updateEnableByGroup(group: String, enable: Boolean)
+
+    @Query("DELETE FROM replace_rules WHERE `group` = :group")
+    fun deleteByGroup(group: String)
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(vararg replaceRule: ReplaceRule): List<Long>
 

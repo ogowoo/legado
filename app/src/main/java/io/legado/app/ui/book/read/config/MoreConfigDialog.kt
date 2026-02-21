@@ -16,6 +16,7 @@ import io.legado.app.R
 import io.legado.app.base.BasePrefDialogFragment
 import io.legado.app.constant.EventBus
 import io.legado.app.constant.PreferKey
+import io.legado.app.help.DefaultReplaceRules
 import io.legado.app.help.config.AppConfig
 import io.legado.app.help.config.ReadBookConfig
 import io.legado.app.lib.prefs.fragment.PreferenceFragment
@@ -31,6 +32,7 @@ import io.legado.app.utils.getPrefBoolean
 import io.legado.app.utils.postEvent
 import io.legado.app.utils.removePref
 import io.legado.app.utils.setEdgeEffectColor
+import io.legado.app.utils.toastOnUi
 
 class MoreConfigDialog : BasePrefDialogFragment() {
     private val readPreferTag = "readPreferenceFragment"
@@ -206,6 +208,15 @@ class MoreConfigDialog : BasePrefDialogFragment() {
                             AppConfig.pageTouchClick = it
                             postEvent(EventBus.UP_CONFIG, arrayListOf(12))
                         }
+                }
+
+                "importAiFilterRules" -> {
+                    if (DefaultReplaceRules.isImported()) {
+                        toastOnUi(R.string.ai_filter_rules_already_imported)
+                    } else {
+                        DefaultReplaceRules.importAiFilterRules()
+                        toastOnUi(R.string.ai_filter_rules_imported)
+                    }
                 }
             }
             return super.onPreferenceTreeClick(preference)

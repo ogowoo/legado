@@ -1254,6 +1254,10 @@
     <string name="ai_repair_max_tokens_summary">生成文本的最大长度(默认512)</string>
     <string name="ai_repair_system_prompt">系统提示词</string>
     <string name="ai_repair_system_prompt_summary">可选：自定义AI角色和任务描述</string>
+    <string name="import_ai_filter_rules">导入AI过滤规则</string>
+    <string name="import_ai_filter_rules_summary">一键导入常见无意义内容过滤规则到替换净化</string>
+    <string name="ai_filter_rules_imported">AI过滤规则导入成功</string>
+    <string name="ai_filter_rules_already_imported">AI过滤规则已导入</string>
     <string name="ai_repair_mode">AI修正模式</string>
     <string name="ai_repair_mode_summary">选择自动修正或长按预览模式</string>
     <string name="ai_repair_mode_disabled">禁用</string>

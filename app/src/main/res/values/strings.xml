@@ -126,6 +126,10 @@
     <string name="ai_repair_max_tokens_summary">Maximum length of generated text (default 512)</string>
     <string name="ai_repair_system_prompt">System Prompt</string>
     <string name="ai_repair_system_prompt_summary">Optional: Customize the AI character and task description</string>
+    <string name="import_ai_filter_rules">Import AI Filter Rules</string>
+    <string name="import_ai_filter_rules_summary">One-click import of common meaningless content filtering rules to Replace Purification</string>
+    <string name="ai_filter_rules_imported">AI filter rules imported successfully</string>
+    <string name="ai_filter_rules_already_imported">AI filter rules already imported</string>
     <string name="ai_repair_mode">AI Repair Mode</string>
     <string name="ai_repair_mode_summary">Select auto repair or long-press preview mode</string>
     <string name="ai_repair_mode_disabled">Disabled</string>

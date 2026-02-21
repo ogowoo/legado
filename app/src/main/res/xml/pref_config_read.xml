@@ -177,6 +177,13 @@
             app:iconSpaceReserved="false"
             app:isBottomBackground="true" />
 
+        <io.legado.app.lib.prefs.Preference
+            android:key="importAiFilterRules"
+            android:summary="@string/import_ai_filter_rules_summary"
+            android:title="@string/import_ai_filter_rules"
+            app:iconSpaceReserved="false"
+            app:isBottomBackground="true" />
+
     </io.legado.app.lib.prefs.PreferenceCategory>
 
     <io.legado.app.lib.prefs.SwitchPreference
