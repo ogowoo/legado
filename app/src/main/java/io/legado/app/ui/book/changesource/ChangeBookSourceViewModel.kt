@@ -18,6 +18,7 @@ import io.legado.app.data.entities.SearchBook
 import io.legado.app.exception.NoStackTraceException
 import io.legado.app.help.book.BookHelp
 import io.legado.app.help.book.ContentProcessor
+import io.legado.app.help.book.SourceComparator
 import io.legado.app.help.book.primaryStr
 import io.legado.app.help.book.releaseHtmlData
 import io.legado.app.help.config.AppConfig
@@ -567,6 +568,28 @@ open class ChangeBookSourceViewModel(application: Application) : BaseViewModel(a
     private fun getChapterNum(wordCountText: String?): Int {
         wordCountText ?: return -1
         return chapterNumRegex.find(wordCountText)?.groupValues?.get(1)?.toIntOrNull() ?: -1
+    }
+
+    /**
+     * 获取最优书源评估结果
+     */
+    suspend fun getBestSourceEvaluation(): SourceComparator.SourceEvaluation? {
+        if (searchBooks.isEmpty()) return null
+        
+        // 获取所有书源的 BookSource 对象
+        val sourceMap = mutableMapOf<String, BookSource>()
+        searchBooks.forEach { searchBook ->
+            appDb.bookSourceDao.getBookSource(searchBook.origin)?.let {
+                sourceMap[searchBook.origin] = it
+            }
+        }
+        
+        return SourceComparator.getBestSource(
+            searchBooks = searchBooks.toList(),
+            bookMap = bookMap,
+            chapterMap = tocMap,
+            sourceMap = sourceMap
+        )
     }
 
     interface SourceCallback {

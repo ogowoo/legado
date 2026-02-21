@@ -1255,4 +1255,10 @@
     <string name="ai_repair_system_prompt">系统提示词</string>
     <string name="ai_repair_system_prompt_summary">可选：自定义AI角色和任务描述</string>
 
+    <string name="use_best_source">使用最优源</string>
+    <string name="best_source_selected">已选择最优源: %1$s (评分: %2$d)</string>
+    <string name="no_source_available">未找到可用书源</string>
+    <string name="enable_source_comparison">启用书源对比</string>
+    <string name="source_comparison_summary">对比多个书源并选择最优的书源</string>
+
 </resources>

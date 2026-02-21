@@ -349,8 +349,14 @@ class TextChapterLayout(
             var text = content.replace(srcReplaceCharC, srcReplaceCharD)
             if (AppConfig.aiContentRepairEnabled) {
                 try {
-                    text = ContentRepairService.repair(stringBuilder.toString(), text)
+                    AppLog.put("AI内容修正: 正在处理段落...")
+                    val repairedText = ContentRepairService.repair(stringBuilder.toString(), text)
+                    if (repairedText != text) {
+                        AppLog.put("AI内容修正: 已修复段落")
+                    }
+                    text = repairedText
                 } catch (e: Exception) {
+                    AppLog.put("AI内容修正失败: ${e.message}")
                     // ignore and fallback to original text
                 }
             }

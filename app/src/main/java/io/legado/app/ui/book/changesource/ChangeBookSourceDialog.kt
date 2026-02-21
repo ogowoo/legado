@@ -25,9 +25,11 @@ import io.legado.app.data.entities.BookChapter
 import io.legado.app.data.entities.BookSource
 import io.legado.app.data.entities.SearchBook
 import io.legado.app.databinding.DialogBookChangeSourceBinding
+import io.legado.app.help.book.SourceComparator
 import io.legado.app.help.book.isWebFile
 import io.legado.app.help.config.AppConfig
 import io.legado.app.lib.dialogs.alert
+import io.legado.app.utils.toastOnUi
 import io.legado.app.lib.theme.elevation
 import io.legado.app.lib.theme.getPrimaryTextColor
 import io.legado.app.lib.theme.primaryColor
@@ -47,11 +49,13 @@ import io.legado.app.utils.startActivity
 import io.legado.app.utils.transaction
 import io.legado.app.utils.viewbindingdelegate.viewBinding
 import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.conflate
 import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 /**
  * 换源界面
@@ -208,11 +212,55 @@ class ChangeBookSourceDialog() : BaseDialogFragment(R.layout.dialog_book_change_
         binding.tvDur.setOnClickListener {
             scrollToDurSource()
         }
+        binding.tvBestSource.setOnClickListener {
+            selectBestSource()
+        }
         binding.ivTop.setOnClickListener {
             binding.recyclerView.scrollToPosition(0)
         }
         binding.ivBottom.setOnClickListener {
             binding.recyclerView.scrollToPosition(adapter.itemCount - 1)
+        }
+    }
+
+    /**
+     * 选择最优书源
+     */
+    private fun selectBestSource() {
+        val searchBooks = adapter.getItems()
+        if (searchBooks.isEmpty()) {
+            toastOnUi(R.string.no_source_available)
+            return
+        }
+
+        lifecycleScope.launch(IO) {
+            try {
+                val bestEvaluation = viewModel.getBestSourceEvaluation()
+                if (bestEvaluation != null) {
+                    withContext(Main) {
+                        val message = SourceComparator.formatEvaluation(bestEvaluation)
+                        alert(
+                            title = getString(R.string.best_source_selected, 
+                                bestEvaluation.searchBook.originName, 
+                                bestEvaluation.totalScore.toInt()),
+                            message = message
+                        ) {
+                            okButton {
+                                changeTo(bestEvaluation.searchBook)
+                            }
+                            cancelButton()
+                        }
+                    }
+                } else {
+                    withContext(Main) {
+                        toastOnUi(R.string.no_source_available)
+                    }
+                }
+            } catch (e: Exception) {
+                withContext(Main) {
+                    toastOnUi("选择最优源失败: ${e.message}")
+                }
+            }
         }
     }
 
