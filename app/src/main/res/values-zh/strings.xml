@@ -1258,6 +1258,9 @@
     <string name="import_ai_filter_rules_summary">一键导入常见无意义内容过滤规则到替换净化</string>
     <string name="ai_filter_rules_imported">AI过滤规则导入成功</string>
     <string name="ai_filter_rules_already_imported">AI过滤规则已导入</string>
+    <string name="ai_generate_rules">智能生成替换规则</string>
+    <string name="ai_generate_rules_summary">从AI修正结果自动生成替换净化规则</string>
+    <string name="ai_rules_saved">AI规则保存成功</string>
     <string name="ai_repair_mode">AI修正模式</string>
     <string name="ai_repair_mode_summary">选择自动修正或长按预览模式</string>
     <string name="ai_repair_mode_disabled">禁用</string>

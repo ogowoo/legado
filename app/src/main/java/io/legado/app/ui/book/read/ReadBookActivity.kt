@@ -1135,7 +1135,7 @@ class ReadBookActivity : BaseReadBookActivity(),
      * AI 修正应用回调
      * 保存修正后的内容到缓存并刷新页面
      */
-    override fun onAiRepairApply(repairedText: String) {
+    override fun onAiRepairApply(originalText: String, repairedText: String) {
         lifecycleScope.launch {
             try {
                 val book = ReadBook.book ?: return@launch
@@ -1170,6 +1170,21 @@ class ReadBookActivity : BaseReadBookActivity(),
                 toastOnUi("应用失败: ${e.message}")
             }
         }
+    }
+    
+    /**
+     * AI生成替换规则回调
+     */
+    override fun onAiRepairGenerateRules(originalText: String, repairedText: String) {
+        val book = ReadBook.book ?: return
+        showDialogFragment(
+            AiRuleGeneratorDialog.newInstance(
+                originalText = originalText,
+                repairedText = repairedText,
+                bookName = book.name,
+                bookOrigin = book.origin
+            )
+        )
     }
 
     /**

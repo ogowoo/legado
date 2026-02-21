@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AI智能生成替换规则"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryText"
+        android:gravity="center"
+        android:paddingBottom="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="正在分析..."
+        android:textSize="14sp"
+        android:textColor="@color/secondaryText"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/tv_rules"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background_menu"
+        android:padding="12dp"
+        android:textSize="13sp"
+        android:textColor="@color/primaryText"
+        android:scrollbars="vertical"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/rg_scope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="12dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/rb_book_scope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="仅本书应用"
+            android:textSize="14sp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_source_scope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="整个书源应用"
+            android:textSize="14sp"
+            android:layout_marginStart="24dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跳过"
+            android:textSize="14sp"
+            style="?android:attr/borderlessButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存规则"
+            android:textSize="14sp"
+            android:textColor="@color/background"
+            android:backgroundTint="@color/accent"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -70,11 +70,20 @@ class AiRepairCompareDialog : DialogFragment(R.layout.dialog_ai_repair_compare) 
         
         binding.btnApply.setOnClickListener {
             // 通知外部应用修正
-            (activity as? CallBack)?.onAiRepairApply(binding.tvRepaired.text.toString())
+            val repaired = binding.tvRepaired.text.toString()
+            (activity as? CallBack)?.onAiRepairApply(originalText, repaired)
+            dismiss()
+        }
+        
+        binding.btnGenerateRules.setOnClickListener {
+            // 打开规则生成对话框
+            val repaired = binding.tvRepaired.text.toString()
+            (activity as? CallBack)?.onAiRepairGenerateRules(originalText, repaired)
             dismiss()
         }
         
         binding.btnApply.visibility = View.GONE
+        binding.btnGenerateRules.visibility = View.GONE
     }
 
     private fun performAiRepair() {
@@ -93,10 +102,12 @@ class AiRepairCompareDialog : DialogFragment(R.layout.dialog_ai_repair_compare) 
                         binding.tvDiff.visibility = View.VISIBLE
                         binding.tvDiff.text = diff
                         binding.btnApply.visibility = View.VISIBLE
+                        binding.btnGenerateRules.visibility = View.VISIBLE
                     } else {
                         binding.tvDiff.visibility = View.VISIBLE
                         binding.tvDiff.text = "【无需修正】文本没有错误"
                         binding.btnApply.visibility = View.GONE
+                        binding.btnGenerateRules.visibility = View.GONE
                     }
                 }
             } catch (e: Exception) {
@@ -144,6 +155,14 @@ class AiRepairCompareDialog : DialogFragment(R.layout.dialog_ai_repair_compare) 
     }
 
     interface CallBack {
-        fun onAiRepairApply(repairedText: String)
+        /**
+         * 应用AI修正
+         */
+        fun onAiRepairApply(originalText: String, repairedText: String)
+        
+        /**
+         * 生成替换规则
+         */
+        fun onAiRepairGenerateRules(originalText: String, repairedText: String)
     }
 }
