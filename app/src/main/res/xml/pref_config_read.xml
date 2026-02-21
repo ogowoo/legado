@@ -108,7 +108,7 @@
             app:isBottomBackground="true" />
 
         <io.legado.app.lib.prefs.NameListPreference
-            android:defaultValue="1"
+            android:defaultValue="0"
             android:entries="@array/ai_repair_mode_title"
             android:entryValues="@array/ai_repair_mode_value"
             android:key="aiRepairMode"

@@ -871,12 +871,12 @@ object AppConfig : SharedPreferences.OnSharedPreferenceChangeListener {
 
     /**
      * AI 修正模式
-     * 0 = 禁用
-     * 1 = 自动修正（默认）
+     * 0 = 禁用（默认，避免阻塞页面加载）
+     * 1 = 自动修正
      * 2 = 长按预览
      */
     val aiRepairMode: Int
-        get() = appCtx.getPrefString(PreferKey.aiRepairMode, "1")?.toIntOrNull() ?: 1
+        get() = appCtx.getPrefString(PreferKey.aiRepairMode, "0")?.toIntOrNull() ?: 0
 
     /**
      * 是否启用 AI 自动修正
