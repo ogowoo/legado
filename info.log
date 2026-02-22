@@ -1,0 +1,1138 @@
+Initialized native services in: C:\Users\Admin\.gradle\native
+Initialized jansi services in: C:\Users\Admin\.gradle\native
+Removing 1 daemon stop events from registry
+Previous Daemon (26224) stopped at Sun Feb 22 23:34:26 CST 2026 after running out of JVM Metaspace
+Starting a Gradle Daemon, 1 stopped Daemon could not be reused, use --status for details
+Starting process 'Gradle build daemon'. Working directory: C:\Users\Admin\.gradle\daemon\8.14.3 Command: C:\Program Files\ojdkbuild\java-17-openjdk-17.0.3.0.6-1\bin\java.exe --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED -XX:+UseParallelGC -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx6g -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -cp C:\Users\Admin\.gradle\wrapper\dists\gradle-8.14.3-bin\cv11ve7ro1n3o1j4so8xd9n66\gradle-8.14.3\lib\gradle-daemon-main-8.14.3.jar -javaagent:C:\Users\Admin\.gradle\wrapper\dists\gradle-8.14.3-bin\cv11ve7ro1n3o1j4so8xd9n66\gradle-8.14.3\lib\agents\gradle-instrumentation-agent-8.14.3.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.14.3
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 1.523 secs.
+The client will now receive all logging from the daemon (pid: 7696). The daemon log file: C:\Users\Admin\.gradle\daemon\8.14.3\daemon-7696.out.log
+Starting build in new daemon [memory: 5.3 GiB]
+Using 22 worker leases.
+Received JVM installation metadata from 'C:\Program Files\ojdkbuild\java-17-openjdk-17.0.3.0.6-1': {JAVA_HOME=C:\Program Files\ojdkbuild\java-17-openjdk-17.0.3.0.6-1, JAVA_VERSION=17.0.3, JAVA_VENDOR=ojdkbuild, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.3+6-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.3+6-LTS, VM_VENDOR=ojdkbuild, OS_ARCH=amd64}
+Watching the file system is configured to be enabled
+Now considering [C:\Users\Admin\legado-local] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\Admin\legado-local\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\Admin\legado-local\build.gradle'.
+Included projects: [root project 'legado', project ':app', project ':modules', project ':modules:book', project ':modules:rhino']
+
+> Configure project :
+Evaluating root project 'legado' using build file 'C:\Users\Admin\legado-local\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '8.13.2', apply: false]
+Resolved plugin [id: 'com.android.library', version: '8.13.2', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.3.0', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.parcelize', version: '2.3.0', apply: false]
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.3.4', apply: false]
+Resolved plugin [id: 'com.google.gms.google-services', version: '4.4.2', apply: false]
+Resolved plugin [id: 'androidx.room', version: '2.7.1', apply: false]
+Resolved plugin [id: 'de.undercouch.download', version: '5.6.0', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file 'C:\Users\Admin\legado-local\app\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '8.13.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.3.0']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.parcelize', version: '2.3.0']
+Resolved plugin [id: 'androidx.room', version: '2.7.1']
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.3.4']
+Resolved plugin [id: 'com.google.gms.google-services', version: '4.4.2']
+Using default execution profile
+Build 751706ef-a06b-4fe7-99e0-c2996232b995 is started
+Using Kotlin Gradle Plugin gradle813 variant
+
+> Configure project :modules
+Evaluating project ':modules' using build file 'C:\Users\Admin\legado-local\modules\build.gradle'.
+
+> Configure project :modules:book
+Evaluating project ':modules:book' using build file 'C:\Users\Admin\legado-local\modules\book\build.gradle'.
+Resolved plugin [id: 'com.android.library', version: '8.13.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.3.0']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle813 variant
+
+> Configure project :modules:rhino
+Evaluating project ':modules:rhino' using build file 'C:\Users\Admin\legado-local\modules\rhino\build.gradle'.
+Resolved plugin [id: 'com.android.library', version: '8.13.2']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.3.0']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle813 variant
+All projects evaluated.
+Task path ':app:assembleRelease' matched project ':app'
+Task name matched 'assembleRelease'
+Selected primary task 'assembleRelease' from project :app
+Tasks to be executed: [task ':app:preBuild', task ':app:preAppReleaseBuild', task ':app:mergeAppReleaseJniLibFolders', task ':modules:book:preBuild', task ':modules:book:preReleaseBuild', task ':modules:book:mergeReleaseJniLibFolders', task ':modules:book:mergeReleaseNativeLibs', task ':modules:book:copyReleaseJniLibsProjectOnly', task ':modules:rhino:preBuild', task ':modules:rhino:preReleaseBuild', task ':modules:rhino:mergeReleaseJniLibFolders', task ':modules:rhino:mergeReleaseNativeLibs', task ':modules:rhino:copyReleaseJniLibsProjectOnly', task ':app:mergeAppReleaseNativeLibs', task ':app:stripAppReleaseDebugSymbols', task ':app:extractAppReleaseNativeSymbolTables', task ':app:mergeAppReleaseNativeDebugMetadata', task ':modules:book:prepareReleaseArtProfile', task ':modules:rhino:prepareReleaseArtProfile', task ':app:mergeAppReleaseArtProfile', task ':app:expandAppReleaseL8ArtProfileWildcards', task ':modules:book:checkKotlinGradlePluginConfigurationErrors', task ':modules:book:generateReleaseResources', task ':modules:book:packageReleaseResources', task ':modules:book:processReleaseNavigationResources', task ':modules:book:parseReleaseLocalResources', task ':modules:book:generateReleaseRFile', task ':modules:book:compileReleaseKotlin', task ':modules:book:javaPreCompileRelease', task ':modules:book:compileReleaseJavaWithJavac', task ':modules:book:mergeReleaseGeneratedProguardFiles', task ':modules:book:exportReleaseConsumerProguardFiles', task ':modules:rhino:checkKotlinGradlePluginConfigurationErrors', task ':modules:rhino:generateReleaseResources', task ':modules:rhino:packageReleaseResources', task ':modules:rhino:processReleaseNavigationResources', task ':modules:rhino:parseReleaseLocalResources', task ':modules:rhino:generateReleaseRFile', task ':modules:rhino:compileReleaseKotlin', task ':modules:rhino:javaPreCompileRelease', task ':modules:rhino:compileReleaseJavaWithJavac', task ':modules:rhino:mergeReleaseGeneratedProguardFiles', task ':modules:rhino:exportReleaseConsumerProguardFiles', task ':app:buildKotlinToolingMetadata', task ':app:checkAppReleaseDuplicateClasses', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:dataBindingMergeDependencyArtifactsAppRelease', task ':app:generateAppReleaseResources', task ':app:processAppReleaseGoogleServices', task ':app:mergeAppReleaseResources', task ':app:packageAppReleaseResources', task ':app:processAppReleaseNavigationResources', task ':app:parseAppReleaseLocalResources', task ':app:dataBindingGenBaseClassesAppRelease', task ':app:generateAppReleaseBuildConfig', task ':modules:book:writeReleaseAarMetadata', task ':modules:rhino:writeReleaseAarMetadata', task ':app:checkAppReleaseAarMetadata', task ':app:compileAppReleaseNavigationResources', task ':app:mapAppReleaseSourceSetPaths', task ':app:createAppReleaseCompatibleScreenManifests', task ':app:extractDeepLinksAppRelease', task ':modules:book:extractDeepLinksRelease', task ':modules:book:processReleaseManifest', task ':modules:rhino:extractDeepLinksRelease', task ':modules:rhino:processReleaseManifest', task ':app:processAppReleaseMainManifest', task ':app:processAppReleaseManifest', task ':app:processAppReleaseManifestForPackage', task ':app:processAppReleaseResources', task ':modules:book:bundleLibCompileToJarRelease', task ':modules:rhino:bundleLibCompileToJarRelease', task ':app:kspAppReleaseKotlin', task ':app:compileAppReleaseKotlin', task ':app:javaPreCompileAppRelease', task ':app:compileAppReleaseJavaWithJavac', task ':modules:book:bundleLibRuntimeToJarRelease', task ':modules:rhino:bundleLibRuntimeToJarRelease', task ':app:expandAppReleaseArtProfileWildcards', task ':app:extractProguardFiles', task ':app:mergeAppReleaseGeneratedProguardFiles', task ':app:processAppReleaseJavaRes', task ':modules:book:processReleaseJavaRes', task ':modules:rhino:processReleaseJavaRes', task ':app:mergeAppReleaseJavaResource', task ':app:mergeAppReleaseStartupProfile', task ':app:minifyAppReleaseWithR8', task ':app:l8DexDesugarLibAppRelease', task ':app:compileAppReleaseArtProfile', task ':app:copyRoomSchemas', task ':app:generateAppReleaseAssets', task ':modules:book:generateReleaseAssets', task ':modules:book:mergeReleaseAssets', task ':modules:rhino:generateReleaseAssets', task ':modules:rhino:mergeReleaseAssets', task ':app:mergeAppReleaseAssets', task ':app:compressAppReleaseAssets', task ':app:extractAppReleaseVersionControlInfo', task ':modules:book:createFullJarRelease', task ':modules:book:extractProguardFiles', task ':modules:book:generateReleaseLintModel', task ':modules:book:prepareLintJarForPublish', task ':modules:rhino:createFullJarRelease', task ':modules:rhino:extractProguardFiles', task ':modules:rhino:generateReleaseLintModel', task ':modules:rhino:prepareLintJarForPublish', task ':app:generateAppReleaseLintVitalReportModel', task ':modules:book:checkReleaseAarMetadata', task ':modules:book:stripReleaseDebugSymbols', task ':modules:book:copyReleaseJniLibsProjectAndLocalJars', task ':modules:book:extractDeepLinksForAarRelease', task ':modules:book:extractReleaseAnnotations', task ':modules:book:mergeReleaseConsumerProguardFiles', task ':modules:book:mergeReleaseJavaResource', task ':modules:book:syncReleaseLibJars', task ':modules:book:bundleReleaseLocalLintAar', task ':modules:rhino:checkReleaseAarMetadata', task ':modules:rhino:stripReleaseDebugSymbols', task ':modules:rhino:copyReleaseJniLibsProjectAndLocalJars', task ':modules:rhino:extractDeepLinksForAarRelease', task ':modules:rhino:extractReleaseAnnotations', task ':modules:rhino:mergeReleaseConsumerProguardFiles', task ':modules:rhino:mergeReleaseJavaResource', task ':modules:rhino:syncReleaseLibJars', task ':modules:rhino:bundleReleaseLocalLintAar', task ':modules:book:lintVitalAnalyzeRelease', task ':modules:book:writeReleaseLintModelMetadata', task ':modules:rhino:lintVitalAnalyzeRelease', task ':modules:rhino:writeReleaseLintModelMetadata', task ':app:lintVitalAnalyzeAppRelease', task ':modules:book:generateReleaseLintVitalModel', task ':modules:rhino:generateReleaseLintVitalModel', task ':app:lintVitalReportAppRelease', task ':app:lintVitalAppRelease', task ':app:convertShrunkResourcesToBinaryAppRelease', task ':app:optimizeAppReleaseResources', task ':app:collectAppReleaseDependencies', task ':app:sdkAppReleaseDependencyData', task ':app:validateSigningAppRelease', task ':app:writeAppReleaseAppMetadata', task ':app:writeAppReleaseSigningConfigVersions', task ':app:packageAppRelease', task ':app:createAppReleaseApkListingFileRedirect', task ':app:assembleAppRelease', task ':app:assembleRelease']
+Tasks that were excluded: []
+work action Parameters of FilterShrinkerRulesTransform (Thread[Execution worker Thread 3,5,main]) started.
+work action Parameters of ExtractAarTransform (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:preBuild (Thread[Execution worker Thread 3,5,main]) started.
+:app:preBuild (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preAppReleaseBuild (Thread[Execution worker Thread 3,5,main]) started.
+:app:preAppReleaseBuild (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:preAppReleaseBuild UP-TO-DATE
+Skipping task ':app:preAppReleaseBuild' as it has no actions.
+Resolve mutations for :app:mergeAppReleaseJniLibFolders (Thread[Execution worker Thread 3,5,main]) started.
+:app:mergeAppReleaseJniLibFolders (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeAppReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':app:mergeAppReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeAppReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :modules:book:preBuild (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:preBuild (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:preBuild UP-TO-DATE
+Skipping task ':modules:book:preBuild' as it has no actions.
+Resolve mutations for :modules:book:preReleaseBuild (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:preReleaseBuild (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:preReleaseBuild UP-TO-DATE
+Skipping task ':modules:book:preReleaseBuild' as it has no actions.
+Resolve mutations for :modules:book:mergeReleaseJniLibFolders (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:mergeReleaseJniLibFolders (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':modules:book:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:book:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :modules:book:mergeReleaseNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:mergeReleaseNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:mergeReleaseNativeLibs NO-SOURCE
+Skipping task ':modules:book:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :modules:book:copyReleaseJniLibsProjectOnly (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:copyReleaseJniLibsProjectOnly (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':modules:book:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :modules:book) (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :modules:rhino:preBuild (Thread[Execution worker Thread 3,5,main]) started.
+:modules:rhino:preBuild (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:rhino:preBuild UP-TO-DATE
+Skipping task ':modules:rhino:preBuild' as it has no actions.
+Resolve mutations for :modules:rhino:preReleaseBuild (Thread[Execution worker Thread 3,5,main]) started.
+:modules:rhino:preReleaseBuild (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:rhino:preReleaseBuild UP-TO-DATE
+Skipping task ':modules:rhino:preReleaseBuild' as it has no actions.
+Resolve mutations for :modules:rhino:mergeReleaseJniLibFolders (Thread[Execution worker Thread 3,5,main]) started.
+:modules:rhino:mergeReleaseJniLibFolders (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:rhino:mergeReleaseJniLibFolders UP-TO-DATE
+Caching disabled for task ':modules:rhino:mergeReleaseJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:rhino:mergeReleaseJniLibFolders' as it is up-to-date.
+Resolve mutations for :modules:rhino:mergeReleaseNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
+:modules:rhino:mergeReleaseNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:rhino:mergeReleaseNativeLibs NO-SOURCE
+Skipping task ':modules:rhino:mergeReleaseNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :modules:rhino:copyReleaseJniLibsProjectOnly (Thread[Execution worker Thread 3,5,main]) started.
+:modules:rhino:copyReleaseJniLibsProjectOnly (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:rhino:copyReleaseJniLibsProjectOnly UP-TO-DATE
+Caching disabled for task ':modules:rhino:copyReleaseJniLibsProjectOnly' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:copyReleaseJniLibsProjectOnly' as it is up-to-date.
+work action resolve jni (project :modules:rhino) (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:mergeAppReleaseNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
+:app:mergeAppReleaseNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeAppReleaseNativeLibs UP-TO-DATE
+Caching disabled for task ':app:mergeAppReleaseNativeLibs' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mergeAppReleaseNativeLibs' as it is up-to-date.
+Resolve mutations for :app:stripAppReleaseDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+:app:stripAppReleaseDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:stripAppReleaseDebugSymbols UP-TO-DATE
+Caching disabled for task ':app:stripAppReleaseDebugSymbols' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:stripAppReleaseDebugSymbols' as it is up-to-date.
+Resolve mutations for :app:extractAppReleaseNativeSymbolTables (Thread[Execution worker Thread 3,5,main]) started.
+:app:extractAppReleaseNativeSymbolTables (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:extractAppReleaseNativeSymbolTables UP-TO-DATE
+Caching disabled for task ':app:extractAppReleaseNativeSymbolTables' because:
+  Build cache is disabled
+Skipping task ':app:extractAppReleaseNativeSymbolTables' as it is up-to-date.
+Resolve mutations for :app:mergeAppReleaseNativeDebugMetadata (Thread[Execution worker Thread 3,5,main]) started.
+:app:mergeAppReleaseNativeDebugMetadata (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeAppReleaseNativeDebugMetadata NO-SOURCE
+Skipping task ':app:mergeAppReleaseNativeDebugMetadata' as it has no source files and no previous output files.
+Resolve mutations for :modules:book:prepareReleaseArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:prepareReleaseArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:prepareReleaseArtProfile UP-TO-DATE
+Caching disabled for task ':modules:book:prepareReleaseArtProfile' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:prepareReleaseArtProfile' as it is up-to-date.
+work action resolve baseline-prof.txt (project :modules:book) (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :modules:rhino:prepareReleaseArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+:modules:rhino:prepareReleaseArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:rhino:prepareReleaseArtProfile UP-TO-DATE
+Caching disabled for task ':modules:rhino:prepareReleaseArtProfile' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:prepareReleaseArtProfile' as it is up-to-date.
+work action resolve baseline-prof.txt (project :modules:rhino) (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:mergeAppReleaseArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+:app:mergeAppReleaseArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeAppReleaseArtProfile UP-TO-DATE
+Caching disabled for task ':app:mergeAppReleaseArtProfile' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeAppReleaseArtProfile' as it is up-to-date.
+Resolve mutations for :app:expandAppReleaseL8ArtProfileWildcards (Thread[Execution worker Thread 3,5,main]) started.
+:app:expandAppReleaseL8ArtProfileWildcards (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:expandAppReleaseL8ArtProfileWildcards UP-TO-DATE
+Caching disabled for task ':app:expandAppReleaseL8ArtProfileWildcards' because:
+  Build cache is disabled
+Skipping task ':app:expandAppReleaseL8ArtProfileWildcards' as it is up-to-date.
+Resolve mutations for :modules:book:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':modules:book:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :modules:book:generateReleaseResources (Thread[Execution worker Thread 3,5,main]) started.
+:modules:book:generateReleaseResources (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:generateReleaseResources UP-TO-DATE
+Caching disabled for task ':modules:book:generateReleaseResources' because:
+  Build cache is disabled
+Skipping task ':modules:book:generateReleaseResources' as it is up-to-date.
+Resolve mutations for :modules:book:packageReleaseResources (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:packageReleaseResources (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:packageReleaseResources UP-TO-DATE
+Caching disabled for task ':modules:book:packageReleaseResources' because:
+  Build cache is disabled
+Skipping task ':modules:book:packageReleaseResources' as it is up-to-date.
+work action resolve packageReleaseResources (project :modules:book) (Thread[Execution worker Thread 6,5,main]) started.
+Resolve mutations for :modules:book:processReleaseNavigationResources (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:processReleaseNavigationResources (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:processReleaseNavigationResources UP-TO-DATE
+Caching disabled for task ':modules:book:processReleaseNavigationResources' because:
+  Build cache is disabled
+Skipping task ':modules:book:processReleaseNavigationResources' as it is up-to-date.
+work action resolve release (project :modules:book) (Thread[Execution worker Thread 6,5,main]) started.
+Resolve mutations for :modules:book:parseReleaseLocalResources (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:parseReleaseLocalResources (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:parseReleaseLocalResources UP-TO-DATE
+Caching disabled for task ':modules:book:parseReleaseLocalResources' because:
+  Build cache is disabled
+Skipping task ':modules:book:parseReleaseLocalResources' as it is up-to-date.
+Resolve mutations for :modules:book:generateReleaseRFile (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:generateReleaseRFile (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:generateReleaseRFile UP-TO-DATE
+Caching disabled for task ':modules:book:generateReleaseRFile' because:
+  Build cache is disabled
+Skipping task ':modules:book:generateReleaseRFile' as it is up-to-date.
+work action resolve package-aware-r.txt (project :modules:book) (Thread[Execution worker Thread 6,5,main]) started.
+Resolve mutations for :modules:book:compileReleaseKotlin (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:compileReleaseKotlin (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:compileReleaseKotlin NO-SOURCE
+Skipping task ':modules:book:compileReleaseKotlin' as it has no source files and no previous output files.
+Resolve mutations for :modules:book:javaPreCompileRelease (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:javaPreCompileRelease (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:javaPreCompileRelease UP-TO-DATE
+Caching disabled for task ':modules:book:javaPreCompileRelease' because:
+  Build cache is disabled
+Skipping task ':modules:book:javaPreCompileRelease' as it is up-to-date.
+Resolve mutations for :modules:book:compileReleaseJavaWithJavac (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:compileReleaseJavaWithJavac (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:compileReleaseJavaWithJavac UP-TO-DATE
+Custom actions are attached to task ':modules:book:compileReleaseJavaWithJavac'.
+Caching disabled for task ':modules:book:compileReleaseJavaWithJavac' because:
+  Build cache is disabled
+Skipping task ':modules:book:compileReleaseJavaWithJavac' as it is up-to-date.
+No compile result for :modules:book:compileReleaseJavaWithJavac
+No compile result for :modules:book:compileReleaseJavaWithJavac
+Resolve mutations for :modules:book:mergeReleaseGeneratedProguardFiles (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:mergeReleaseGeneratedProguardFiles (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:book:mergeReleaseGeneratedProguardFiles' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:book:mergeReleaseGeneratedProguardFiles' as it is up-to-date.
+Resolve mutations for :modules:book:exportReleaseConsumerProguardFiles (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:exportReleaseConsumerProguardFiles (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:exportReleaseConsumerProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:book:exportReleaseConsumerProguardFiles' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:exportReleaseConsumerProguardFiles' as it is up-to-date.
+work action resolve exportReleaseConsumerProguardFiles (project :modules:book) (Thread[Execution worker Thread 6,5,main]) started.
+FilterShrinkerRulesTransform (Thread[Execution worker Thread 6,5,main]) started.
+Resolve mutations for :modules:rhino:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':modules:rhino:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :modules:rhino:generateReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:generateReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:generateReleaseResources UP-TO-DATE
+Caching disabled for task ':modules:rhino:generateReleaseResources' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:generateReleaseResources' as it is up-to-date.
+Resolve mutations for :modules:rhino:packageReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:packageReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:packageReleaseResources UP-TO-DATE
+Caching disabled for task ':modules:rhino:packageReleaseResources' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:packageReleaseResources' as it is up-to-date.
+work action resolve packageReleaseResources (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:rhino:processReleaseNavigationResources (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:processReleaseNavigationResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:processReleaseNavigationResources UP-TO-DATE
+Caching disabled for task ':modules:rhino:processReleaseNavigationResources' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:processReleaseNavigationResources' as it is up-to-date.
+work action resolve release (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:rhino:parseReleaseLocalResources (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:parseReleaseLocalResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:parseReleaseLocalResources UP-TO-DATE
+Caching disabled for task ':modules:rhino:parseReleaseLocalResources' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:parseReleaseLocalResources' as it is up-to-date.
+Resolve mutations for :modules:rhino:generateReleaseRFile (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:generateReleaseRFile (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:generateReleaseRFile UP-TO-DATE
+Caching disabled for task ':modules:rhino:generateReleaseRFile' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:generateReleaseRFile' as it is up-to-date.
+work action resolve package-aware-r.txt (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:rhino:compileReleaseKotlin (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:compileReleaseKotlin (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:compileReleaseKotlin UP-TO-DATE
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :modules:rhino:compileDebugAndroidTestKotlin
+Caching disabled for task ':modules:rhino:compileReleaseKotlin' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:compileReleaseKotlin' as it is up-to-date.
+Resolve mutations for :modules:rhino:javaPreCompileRelease (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:javaPreCompileRelease (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:javaPreCompileRelease UP-TO-DATE
+Caching disabled for task ':modules:rhino:javaPreCompileRelease' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:javaPreCompileRelease' as it is up-to-date.
+Resolve mutations for :modules:rhino:compileReleaseJavaWithJavac (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:compileReleaseJavaWithJavac (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:compileReleaseJavaWithJavac NO-SOURCE
+Skipping task ':modules:rhino:compileReleaseJavaWithJavac' as it has no source files and no previous output files.
+Resolve mutations for :modules:rhino:mergeReleaseGeneratedProguardFiles (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:mergeReleaseGeneratedProguardFiles (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:rhino:mergeReleaseGeneratedProguardFiles' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:rhino:mergeReleaseGeneratedProguardFiles' as it is up-to-date.
+Resolve mutations for :modules:rhino:exportReleaseConsumerProguardFiles (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:exportReleaseConsumerProguardFiles (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:exportReleaseConsumerProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:rhino:exportReleaseConsumerProguardFiles' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:exportReleaseConsumerProguardFiles' as it is up-to-date.
+work action resolve exportReleaseConsumerProguardFiles (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+FilterShrinkerRulesTransform (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :app:buildKotlinToolingMetadata (Thread[Execution worker Thread 21,5,main]) started.
+:app:buildKotlinToolingMetadata (Thread[Execution worker Thread 21,5,main]) started.
+
+> Task :app:buildKotlinToolingMetadata UP-TO-DATE
+Caching disabled for task ':app:buildKotlinToolingMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:buildKotlinToolingMetadata' as it is up-to-date.
+Resolve mutations for :app:checkAppReleaseDuplicateClasses (Thread[Execution worker Thread 21,5,main]) started.
+:app:checkAppReleaseDuplicateClasses (Thread[Execution worker Thread 21,5,main]) started.
+
+> Task :app:checkAppReleaseDuplicateClasses UP-TO-DATE
+Caching disabled for task ':app:checkAppReleaseDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkAppReleaseDuplicateClasses' as it is up-to-date.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker Thread 21,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker Thread 21,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsAppRelease (Thread[Execution worker Thread 21,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsAppRelease (Thread[Execution worker Thread 21,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsAppRelease UP-TO-DATE
+Registered task dependencies: app:appReleaseCompileClasspath
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: com.google.firebase:firebase-analytics
+Skipping misunderstood TO dep string: com.google.firebase:firebase-perf
+Skipping misunderstood TO dep string: io.github.rosemoe:editor
+Skipping misunderstood TO dep string: io.github.rosemoe:language-textmate
+Starting dependency analysis
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsAppRelease' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:dataBindingMergeDependencyArtifactsAppRelease' as it is up-to-date.
+Resolve mutations for :app:generateAppReleaseResources (Thread[Execution worker Thread 21,5,main]) started.
+:app:generateAppReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:generateAppReleaseResources UP-TO-DATE
+Caching disabled for task ':app:generateAppReleaseResources' because:
+  Build cache is disabled
+Skipping task ':app:generateAppReleaseResources' as it is up-to-date.
+Resolve mutations for :app:processAppReleaseGoogleServices (Thread[Execution worker Thread 21,5,main]) started.
+:app:processAppReleaseGoogleServices (Thread[Execution worker Thread 21,5,main]) started.
+
+> Task :app:processAppReleaseGoogleServices UP-TO-DATE
+Caching disabled for task ':app:processAppReleaseGoogleServices' because:
+  Build cache is disabled
+Skipping task ':app:processAppReleaseGoogleServices' as it is up-to-date.
+Resolve mutations for :app:mergeAppReleaseResources (Thread[Execution worker Thread 21,5,main]) started.
+:app:mergeAppReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:mergeAppReleaseResources UP-TO-DATE
+Caching disabled for task ':app:mergeAppReleaseResources' because:
+  Build cache is disabled
+Skipping task ':app:mergeAppReleaseResources' as it is up-to-date.
+Resolve mutations for :app:packageAppReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+:app:packageAppReleaseResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:packageAppReleaseResources UP-TO-DATE
+Caching disabled for task ':app:packageAppReleaseResources' because:
+  Build cache is disabled
+Skipping task ':app:packageAppReleaseResources' as it is up-to-date.
+Resolve mutations for :app:processAppReleaseNavigationResources (Thread[Execution worker Thread 10,5,main]) started.
+:app:processAppReleaseNavigationResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:processAppReleaseNavigationResources UP-TO-DATE
+Caching disabled for task ':app:processAppReleaseNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:processAppReleaseNavigationResources' as it is up-to-date.
+Resolve mutations for :app:parseAppReleaseLocalResources (Thread[Execution worker Thread 10,5,main]) started.
+:app:parseAppReleaseLocalResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:parseAppReleaseLocalResources UP-TO-DATE
+Caching disabled for task ':app:parseAppReleaseLocalResources' because:
+  Build cache is disabled
+Skipping task ':app:parseAppReleaseLocalResources' as it is up-to-date.
+Resolve mutations for :app:dataBindingGenBaseClassesAppRelease (Thread[Execution worker Thread 10,5,main]) started.
+:app:dataBindingGenBaseClassesAppRelease (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesAppRelease UP-TO-DATE
+Caching disabled for task ':app:dataBindingGenBaseClassesAppRelease' because:
+  Build cache is disabled
+Skipping task ':app:dataBindingGenBaseClassesAppRelease' as it is up-to-date.
+Resolve mutations for :app:generateAppReleaseBuildConfig (Thread[Execution worker Thread 10,5,main]) started.
+:app:generateAppReleaseBuildConfig (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:generateAppReleaseBuildConfig UP-TO-DATE
+Caching disabled for task ':app:generateAppReleaseBuildConfig' because:
+  Build cache is disabled
+Skipping task ':app:generateAppReleaseBuildConfig' as it is up-to-date.
+Resolve mutations for :modules:book:writeReleaseAarMetadata (Thread[Execution worker Thread 10,5,main]) started.
+:modules:book:writeReleaseAarMetadata (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:book:writeReleaseAarMetadata UP-TO-DATE
+Caching disabled for task ':modules:book:writeReleaseAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:writeReleaseAarMetadata' as it is up-to-date.
+work action resolve aar-metadata.properties (project :modules:book) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:rhino:writeReleaseAarMetadata (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:writeReleaseAarMetadata (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:writeReleaseAarMetadata UP-TO-DATE
+Caching disabled for task ':modules:rhino:writeReleaseAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:writeReleaseAarMetadata' as it is up-to-date.
+work action resolve aar-metadata.properties (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :app:checkAppReleaseAarMetadata (Thread[Execution worker Thread 10,5,main]) started.
+:app:checkAppReleaseAarMetadata (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:checkAppReleaseAarMetadata UP-TO-DATE
+Caching disabled for task ':app:checkAppReleaseAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:checkAppReleaseAarMetadata' as it is up-to-date.
+Resolve mutations for :app:compileAppReleaseNavigationResources (Thread[Execution worker Thread 10,5,main]) started.
+:app:compileAppReleaseNavigationResources (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:compileAppReleaseNavigationResources UP-TO-DATE
+Caching disabled for task ':app:compileAppReleaseNavigationResources' because:
+  Build cache is disabled
+Skipping task ':app:compileAppReleaseNavigationResources' as it is up-to-date.
+Resolve mutations for :app:mapAppReleaseSourceSetPaths (Thread[Execution worker Thread 14,5,main]) started.
+:app:mapAppReleaseSourceSetPaths (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:mapAppReleaseSourceSetPaths UP-TO-DATE
+Caching disabled for task ':app:mapAppReleaseSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:mapAppReleaseSourceSetPaths' as it is up-to-date.
+Resolve mutations for :app:createAppReleaseCompatibleScreenManifests (Thread[Execution worker Thread 14,5,main]) started.
+:app:createAppReleaseCompatibleScreenManifests (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:createAppReleaseCompatibleScreenManifests UP-TO-DATE
+Caching disabled for task ':app:createAppReleaseCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:createAppReleaseCompatibleScreenManifests' as it is up-to-date.
+Resolve mutations for :app:extractDeepLinksAppRelease (Thread[Execution worker Thread 14,5,main]) started.
+:app:extractDeepLinksAppRelease (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:extractDeepLinksAppRelease UP-TO-DATE
+Caching disabled for task ':app:extractDeepLinksAppRelease' because:
+  Build cache is disabled
+Skipping task ':app:extractDeepLinksAppRelease' as it is up-to-date.
+Resolve mutations for :modules:book:extractDeepLinksRelease (Thread[Execution worker Thread 14,5,main]) started.
+:modules:book:extractDeepLinksRelease (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :modules:book:extractDeepLinksRelease UP-TO-DATE
+Caching disabled for task ':modules:book:extractDeepLinksRelease' because:
+  Build cache is disabled
+Skipping task ':modules:book:extractDeepLinksRelease' as it is up-to-date.
+work action resolve navigation.json (project :modules:book) (Thread[Execution worker Thread 14,5,main]) started.
+Resolve mutations for :modules:book:processReleaseManifest (Thread[Execution worker Thread 14,5,main]) started.
+:modules:book:processReleaseManifest (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :modules:book:processReleaseManifest UP-TO-DATE
+Caching disabled for task ':modules:book:processReleaseManifest' because:
+  Build cache is disabled
+Skipping task ':modules:book:processReleaseManifest' as it is up-to-date.
+work action resolve AndroidManifest.xml (project :modules:book) (Thread[Execution worker Thread 14,5,main]) started.
+Resolve mutations for :modules:rhino:extractDeepLinksRelease (Thread[Execution worker Thread 14,5,main]) started.
+:modules:rhino:extractDeepLinksRelease (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :modules:rhino:extractDeepLinksRelease UP-TO-DATE
+Caching disabled for task ':modules:rhino:extractDeepLinksRelease' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:extractDeepLinksRelease' as it is up-to-date.
+work action resolve navigation.json (project :modules:rhino) (Thread[Execution worker Thread 14,5,main]) started.
+Resolve mutations for :modules:rhino:processReleaseManifest (Thread[Execution worker Thread 14,5,main]) started.
+:modules:rhino:processReleaseManifest (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :modules:rhino:processReleaseManifest UP-TO-DATE
+Caching disabled for task ':modules:rhino:processReleaseManifest' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:processReleaseManifest' as it is up-to-date.
+work action resolve AndroidManifest.xml (project :modules:rhino) (Thread[Execution worker Thread 14,5,main]) started.
+Resolve mutations for :app:processAppReleaseMainManifest (Thread[Execution worker Thread 14,5,main]) started.
+:app:processAppReleaseMainManifest (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:processAppReleaseMainManifest UP-TO-DATE
+Caching disabled for task ':app:processAppReleaseMainManifest' because:
+  Build cache is disabled
+Skipping task ':app:processAppReleaseMainManifest' as it is up-to-date.
+Resolve mutations for :app:processAppReleaseManifest (Thread[Execution worker Thread 14,5,main]) started.
+:app:processAppReleaseManifest (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:processAppReleaseManifest UP-TO-DATE
+Caching disabled for task ':app:processAppReleaseManifest' because:
+  Build cache is disabled
+Skipping task ':app:processAppReleaseManifest' as it is up-to-date.
+Resolve mutations for :app:processAppReleaseManifestForPackage (Thread[Execution worker Thread 14,5,main]) started.
+:app:processAppReleaseManifestForPackage (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:processAppReleaseManifestForPackage UP-TO-DATE
+Custom actions are attached to task ':app:processAppReleaseManifestForPackage'.
+Caching disabled for task ':app:processAppReleaseManifestForPackage' because:
+  Build cache is disabled
+Skipping task ':app:processAppReleaseManifestForPackage' as it is up-to-date.
+Resolve mutations for :app:processAppReleaseResources (Thread[Execution worker Thread 14,5,main]) started.
+:app:processAppReleaseResources (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:processAppReleaseResources UP-TO-DATE
+Caching disabled for task ':app:processAppReleaseResources' because:
+  Build cache is disabled
+Skipping task ':app:processAppReleaseResources' as it is up-to-date.
+Resolve mutations for :modules:book:bundleLibCompileToJarRelease (Thread[Execution worker Thread 14,5,main]) started.
+:modules:book:bundleLibCompileToJarRelease (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :modules:book:bundleLibCompileToJarRelease UP-TO-DATE
+Caching disabled for task ':modules:book:bundleLibCompileToJarRelease' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:book:bundleLibCompileToJarRelease' as it is up-to-date.
+work action resolve classes.jar (project :modules:book) (Thread[Execution worker Thread 14,5,main]) started.
+Resolve mutations for :modules:rhino:bundleLibCompileToJarRelease (Thread[Execution worker Thread 14,5,main]) started.
+:modules:rhino:bundleLibCompileToJarRelease (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :modules:rhino:bundleLibCompileToJarRelease UP-TO-DATE
+Caching disabled for task ':modules:rhino:bundleLibCompileToJarRelease' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:rhino:bundleLibCompileToJarRelease' as it is up-to-date.
+work action resolve classes.jar (project :modules:rhino) (Thread[Execution worker Thread 14,5,main]) started.
+Resolve mutations for :app:kspAppReleaseKotlin (Thread[Execution worker Thread 14,5,main]) started.
+:app:kspAppReleaseKotlin (Thread[Execution worker Thread 14,5,main]) started.
+Resolve mutations for :app:javaPreCompileAppRelease (Thread[Execution worker Thread 16,5,main]) started.
+:app:javaPreCompileAppRelease (Thread[Execution worker Thread 16,5,main]) started.
+
+> Task :app:javaPreCompileAppRelease UP-TO-DATE
+Registered task dependencies: app:_agp_internal_javaPreCompileAppRelease_kspClasspath
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib-jdk8
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Skipping misunderstood TO dep string: org.jetbrains.kotlin:kotlin-stdlib
+Starting dependency analysis
+Caching disabled for task ':app:javaPreCompileAppRelease' because:
+  Build cache is disabled
+Skipping task ':app:javaPreCompileAppRelease' as it is up-to-date.
+Resolve mutations for :modules:book:bundleLibRuntimeToJarRelease (Thread[Execution worker Thread 16,5,main]) started.
+:modules:book:bundleLibRuntimeToJarRelease (Thread[Execution worker Thread 16,5,main]) started.
+
+> Task :modules:book:bundleLibRuntimeToJarRelease UP-TO-DATE
+Caching disabled for task ':modules:book:bundleLibRuntimeToJarRelease' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:book:bundleLibRuntimeToJarRelease' as it is up-to-date.
+work action resolve classes.jar (project :modules:book) (Thread[Execution worker Thread 16,5,main]) started.
+Resolve mutations for :modules:rhino:bundleLibRuntimeToJarRelease (Thread[Execution worker Thread 16,5,main]) started.
+:modules:rhino:bundleLibRuntimeToJarRelease (Thread[Execution worker Thread 16,5,main]) started.
+
+> Task :modules:rhino:bundleLibRuntimeToJarRelease UP-TO-DATE
+Caching disabled for task ':modules:rhino:bundleLibRuntimeToJarRelease' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:rhino:bundleLibRuntimeToJarRelease' as it is up-to-date.
+work action resolve classes.jar (project :modules:rhino) (Thread[Execution worker Thread 16,5,main]) started.
+Resolve mutations for :app:extractProguardFiles (Thread[Execution worker Thread 5,5,main]) started.
+:app:extractProguardFiles (Thread[Execution worker Thread 5,5,main]) started.
+
+> Task :app:extractProguardFiles UP-TO-DATE
+Caching disabled for task ':app:extractProguardFiles' because:
+  Build cache is disabled
+  Fast task
+Skipping task ':app:extractProguardFiles' as it is up-to-date.
+Resolve mutations for :modules:book:processReleaseJavaRes (Thread[Execution worker Thread 5,5,main]) started.
+:modules:book:processReleaseJavaRes (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :modules:book:processReleaseJavaRes UP-TO-DATE
+file or directory 'C:\Users\Admin\legado-local\modules\book\src\release\resources', not found
+file or directory 'C:\Users\Admin\legado-local\modules\book\src\release\resources', not found
+Caching disabled for task ':modules:book:processReleaseJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:processReleaseJavaRes' as it is up-to-date.
+work action resolve out (project :modules:book) (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :modules:rhino:processReleaseJavaRes (Thread[Execution worker Thread 6,5,main]) started.
+:modules:rhino:processReleaseJavaRes (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:rhino:processReleaseJavaRes UP-TO-DATE
+file or directory 'C:\Users\Admin\legado-local\modules\rhino\src\main\resources', not found
+file or directory 'C:\Users\Admin\legado-local\modules\rhino\src\release\resources', not found
+file or directory 'C:\Users\Admin\legado-local\modules\rhino\src\main\resources', not found
+file or directory 'C:\Users\Admin\legado-local\modules\rhino\src\release\resources', not found
+Caching disabled for task ':modules:rhino:processReleaseJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:processReleaseJavaRes' as it is up-to-date.
+work action resolve out (project :modules:rhino) (Thread[Execution worker Thread 6,5,main]) started.
+Resolve mutations for :app:mergeAppReleaseStartupProfile (Thread[Execution worker Thread 6,5,main]) started.
+:app:mergeAppReleaseStartupProfile (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :app:mergeAppReleaseStartupProfile UP-TO-DATE
+Caching disabled for task ':app:mergeAppReleaseStartupProfile' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeAppReleaseStartupProfile' as it is up-to-date.
+Resolve mutations for :app:generateAppReleaseAssets (Thread[Execution worker Thread 6,5,main]) started.
+:app:generateAppReleaseAssets (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :app:generateAppReleaseAssets UP-TO-DATE
+Skipping task ':app:generateAppReleaseAssets' as it has no actions.
+Resolve mutations for :modules:book:generateReleaseAssets (Thread[Execution worker Thread 6,5,main]) started.
+:modules:book:generateReleaseAssets (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :modules:book:generateReleaseAssets UP-TO-DATE
+Skipping task ':modules:book:generateReleaseAssets' as it has no actions.
+Resolve mutations for :modules:book:mergeReleaseAssets (Thread[Execution worker,5,main]) started.
+:modules:book:mergeReleaseAssets (Thread[Execution worker,5,main]) started.
+
+> Task :modules:book:mergeReleaseAssets UP-TO-DATE
+Caching disabled for task ':modules:book:mergeReleaseAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:book:mergeReleaseAssets' as it is up-to-date.
+work action resolve mergeReleaseAssets (project :modules:book) (Thread[Execution worker,5,main]) started.
+Resolve mutations for :modules:rhino:generateReleaseAssets (Thread[Execution worker,5,main]) started.
+:modules:rhino:generateReleaseAssets (Thread[Execution worker,5,main]) started.
+
+> Task :modules:rhino:generateReleaseAssets UP-TO-DATE
+Skipping task ':modules:rhino:generateReleaseAssets' as it has no actions.
+Resolve mutations for :modules:rhino:mergeReleaseAssets (Thread[Execution worker,5,main]) started.
+:modules:rhino:mergeReleaseAssets (Thread[Execution worker,5,main]) started.
+
+> Task :modules:rhino:mergeReleaseAssets UP-TO-DATE
+Caching disabled for task ':modules:rhino:mergeReleaseAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:rhino:mergeReleaseAssets' as it is up-to-date.
+work action resolve mergeReleaseAssets (project :modules:rhino) (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:mergeAppReleaseAssets (Thread[Execution worker,5,main]) started.
+:app:mergeAppReleaseAssets (Thread[Execution worker,5,main]) started.
+
+> Task :app:mergeAppReleaseAssets UP-TO-DATE
+Caching disabled for task ':app:mergeAppReleaseAssets' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':app:mergeAppReleaseAssets' as it is up-to-date.
+Resolve mutations for :app:compressAppReleaseAssets (Thread[Execution worker,5,main]) started.
+:app:compressAppReleaseAssets (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:compressAppReleaseAssets UP-TO-DATE
+Caching disabled for task ':app:compressAppReleaseAssets' because:
+  Build cache is disabled
+Skipping task ':app:compressAppReleaseAssets' as it is up-to-date.
+Resolve mutations for :app:extractAppReleaseVersionControlInfo (Thread[Execution worker Thread 7,5,main]) started.
+:app:extractAppReleaseVersionControlInfo (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :app:extractAppReleaseVersionControlInfo UP-TO-DATE
+Caching disabled for task ':app:extractAppReleaseVersionControlInfo' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:extractAppReleaseVersionControlInfo' as it is up-to-date.
+Resolve mutations for :modules:book:createFullJarRelease (Thread[Execution worker Thread 7,5,main]) started.
+:modules:book:createFullJarRelease (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:book:createFullJarRelease UP-TO-DATE
+Caching disabled for task ':modules:book:createFullJarRelease' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:book:createFullJarRelease' as it is up-to-date.
+work action resolve full.jar (project :modules:book) (Thread[Execution worker Thread 7,5,main]) started.
+work action resolve full.jar (project :modules:book) (Thread[Execution worker Thread 7,5,main]) started.
+Resolve mutations for :modules:book:extractProguardFiles (Thread[Execution worker Thread 7,5,main]) started.
+:modules:book:extractProguardFiles (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:book:extractProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:book:extractProguardFiles' because:
+  Build cache is disabled
+  Fast task
+Skipping task ':modules:book:extractProguardFiles' as it is up-to-date.
+Resolve mutations for :modules:book:generateReleaseLintModel (Thread[Execution worker Thread 7,5,main]) started.
+:modules:book:generateReleaseLintModel (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:book:generateReleaseLintModel UP-TO-DATE
+Caching disabled for task ':modules:book:generateReleaseLintModel' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:generateReleaseLintModel' as it is up-to-date.
+work action resolve generateReleaseLintModel (project :modules:book) (Thread[Execution worker Thread 7,5,main]) started.
+work action resolve generateReleaseLintModel (project :modules:book) (Thread[Execution worker Thread 7,5,main]) started.
+Resolve mutations for :modules:book:prepareLintJarForPublish (Thread[Execution worker Thread 7,5,main]) started.
+:modules:book:prepareLintJarForPublish (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:book:prepareLintJarForPublish UP-TO-DATE
+Caching disabled for task ':modules:book:prepareLintJarForPublish' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:prepareLintJarForPublish' as it is up-to-date.
+work action resolve lint.jar (project :modules:book) (Thread[Execution worker Thread 7,5,main]) started.
+work action resolve lint.jar (project :modules:book) (Thread[Execution worker Thread 7,5,main]) started.
+Resolve mutations for :modules:rhino:createFullJarRelease (Thread[Execution worker Thread 7,5,main]) started.
+:modules:rhino:createFullJarRelease (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:rhino:createFullJarRelease UP-TO-DATE
+Caching disabled for task ':modules:rhino:createFullJarRelease' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:rhino:createFullJarRelease' as it is up-to-date.
+work action resolve full.jar (project :modules:rhino) (Thread[Execution worker Thread 7,5,main]) started.
+work action resolve full.jar (project :modules:rhino) (Thread[Execution worker Thread 7,5,main]) started.
+Resolve mutations for :modules:rhino:extractProguardFiles (Thread[Execution worker Thread 7,5,main]) started.
+:modules:rhino:extractProguardFiles (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:rhino:extractProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:rhino:extractProguardFiles' because:
+  Build cache is disabled
+  Fast task
+Skipping task ':modules:rhino:extractProguardFiles' as it is up-to-date.
+Resolve mutations for :modules:rhino:generateReleaseLintModel (Thread[Execution worker Thread 7,5,main]) started.
+:modules:rhino:generateReleaseLintModel (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:rhino:generateReleaseLintModel UP-TO-DATE
+Caching disabled for task ':modules:rhino:generateReleaseLintModel' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:generateReleaseLintModel' as it is up-to-date.
+work action resolve generateReleaseLintModel (project :modules:rhino) (Thread[Execution worker Thread 7,5,main]) started.
+work action resolve generateReleaseLintModel (project :modules:rhino) (Thread[Execution worker Thread 7,5,main]) started.
+Resolve mutations for :modules:rhino:prepareLintJarForPublish (Thread[Execution worker Thread 7,5,main]) started.
+:modules:rhino:prepareLintJarForPublish (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:rhino:prepareLintJarForPublish UP-TO-DATE
+Caching disabled for task ':modules:rhino:prepareLintJarForPublish' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:prepareLintJarForPublish' as it is up-to-date.
+work action resolve lint.jar (project :modules:rhino) (Thread[Execution worker Thread 7,5,main]) started.
+work action resolve lint.jar (project :modules:rhino) (Thread[Execution worker Thread 7,5,main]) started.
+Resolve mutations for :modules:book:checkReleaseAarMetadata (Thread[Execution worker Thread 7,5,main]) started.
+:modules:book:checkReleaseAarMetadata (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:checkReleaseAarMetadata UP-TO-DATE
+Caching disabled for task ':modules:book:checkReleaseAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:checkReleaseAarMetadata' as it is up-to-date.
+Resolve mutations for :modules:book:stripReleaseDebugSymbols (Thread[Execution worker Thread 7,5,main]) started.
+:modules:book:stripReleaseDebugSymbols (Thread[Execution worker Thread 7,5,main]) started.
+
+> Task :modules:book:stripReleaseDebugSymbols NO-SOURCE
+Skipping task ':modules:book:stripReleaseDebugSymbols' as it has no source files and no previous output files.
+Resolve mutations for :modules:book:copyReleaseJniLibsProjectAndLocalJars (Thread[Execution worker Thread 19,5,main]) started.
+:modules:book:copyReleaseJniLibsProjectAndLocalJars (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+Caching disabled for task ':modules:book:copyReleaseJniLibsProjectAndLocalJars' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:copyReleaseJniLibsProjectAndLocalJars' as it is up-to-date.
+Resolve mutations for :modules:book:extractDeepLinksForAarRelease (Thread[Execution worker Thread 19,5,main]) started.
+:modules:book:extractDeepLinksForAarRelease (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:extractDeepLinksForAarRelease UP-TO-DATE
+Caching disabled for task ':modules:book:extractDeepLinksForAarRelease' because:
+  Build cache is disabled
+Skipping task ':modules:book:extractDeepLinksForAarRelease' as it is up-to-date.
+Resolve mutations for :modules:book:extractReleaseAnnotations (Thread[Execution worker Thread 19,5,main]) started.
+:modules:book:extractReleaseAnnotations (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:extractReleaseAnnotations UP-TO-DATE
+Caching disabled for task ':modules:book:extractReleaseAnnotations' because:
+  Build cache is disabled
+Skipping task ':modules:book:extractReleaseAnnotations' as it is up-to-date.
+Resolve mutations for :modules:book:mergeReleaseConsumerProguardFiles (Thread[Execution worker Thread 19,5,main]) started.
+:modules:book:mergeReleaseConsumerProguardFiles (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:mergeReleaseConsumerProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:book:mergeReleaseConsumerProguardFiles' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:book:mergeReleaseConsumerProguardFiles' as it is up-to-date.
+Resolve mutations for :modules:book:mergeReleaseJavaResource (Thread[Execution worker Thread 19,5,main]) started.
+:modules:book:mergeReleaseJavaResource (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:mergeReleaseJavaResource UP-TO-DATE
+Caching disabled for task ':modules:book:mergeReleaseJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:mergeReleaseJavaResource' as it is up-to-date.
+Resolve mutations for :modules:book:syncReleaseLibJars (Thread[Execution worker Thread 19,5,main]) started.
+:modules:book:syncReleaseLibJars (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:syncReleaseLibJars UP-TO-DATE
+Caching disabled for task ':modules:book:syncReleaseLibJars' because:
+  Build cache is disabled
+Skipping task ':modules:book:syncReleaseLibJars' as it is up-to-date.
+Resolve mutations for :modules:book:bundleReleaseLocalLintAar (Thread[Execution worker Thread 19,5,main]) started.
+:modules:book:bundleReleaseLocalLintAar (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:book:bundleReleaseLocalLintAar UP-TO-DATE
+Caching disabled for task ':modules:book:bundleReleaseLocalLintAar' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:bundleReleaseLocalLintAar' as it is up-to-date.
+work action resolve out.aar (project :modules:book) (Thread[Execution worker Thread 19,5,main]) started.
+work action resolve out.aar (project :modules:book) (Thread[Execution worker Thread 19,5,main]) started.
+ExtractAarTransform (Thread[Execution worker,5,main]) started.
+Resolve mutations for :modules:rhino:checkReleaseAarMetadata (Thread[Execution worker Thread 19,5,main]) started.
+ExtractAarTransform (Thread[Execution worker Thread 5,5,main]) started.
+:modules:rhino:checkReleaseAarMetadata (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:rhino:checkReleaseAarMetadata UP-TO-DATE
+Caching disabled for task ':modules:rhino:checkReleaseAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:checkReleaseAarMetadata' as it is up-to-date.
+Resolve mutations for :modules:rhino:stripReleaseDebugSymbols (Thread[Execution worker Thread 19,5,main]) started.
+:modules:rhino:stripReleaseDebugSymbols (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:rhino:stripReleaseDebugSymbols NO-SOURCE
+Skipping task ':modules:rhino:stripReleaseDebugSymbols' as it has no source files and no previous output files.
+Resolve mutations for :modules:rhino:copyReleaseJniLibsProjectAndLocalJars (Thread[Execution worker Thread 19,5,main]) started.
+:modules:rhino:copyReleaseJniLibsProjectAndLocalJars (Thread[Execution worker Thread 19,5,main]) started.
+
+> Task :modules:rhino:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+Caching disabled for task ':modules:rhino:copyReleaseJniLibsProjectAndLocalJars' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:copyReleaseJniLibsProjectAndLocalJars' as it is up-to-date.
+Resolve mutations for :modules:rhino:extractDeepLinksForAarRelease (Thread[Execution worker Thread 8,5,main]) started.
+:modules:rhino:extractDeepLinksForAarRelease (Thread[Execution worker Thread 8,5,main]) started.
+
+> Task :modules:rhino:extractDeepLinksForAarRelease UP-TO-DATE
+Caching disabled for task ':modules:rhino:extractDeepLinksForAarRelease' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:extractDeepLinksForAarRelease' as it is up-to-date.
+Resolve mutations for :modules:rhino:extractReleaseAnnotations (Thread[Execution worker Thread 8,5,main]) started.
+:modules:rhino:extractReleaseAnnotations (Thread[Execution worker Thread 8,5,main]) started.
+
+> Task :modules:rhino:extractReleaseAnnotations UP-TO-DATE
+Caching disabled for task ':modules:rhino:extractReleaseAnnotations' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:extractReleaseAnnotations' as it is up-to-date.
+Resolve mutations for :modules:rhino:mergeReleaseConsumerProguardFiles (Thread[Execution worker Thread 8,5,main]) started.
+:modules:rhino:mergeReleaseConsumerProguardFiles (Thread[Execution worker Thread 8,5,main]) started.
+
+> Task :modules:rhino:mergeReleaseConsumerProguardFiles UP-TO-DATE
+Caching disabled for task ':modules:rhino:mergeReleaseConsumerProguardFiles' because:
+  Build cache is disabled
+  Simple merging task
+Skipping task ':modules:rhino:mergeReleaseConsumerProguardFiles' as it is up-to-date.
+Resolve mutations for :modules:rhino:mergeReleaseJavaResource (Thread[Execution worker Thread 8,5,main]) started.
+:modules:rhino:mergeReleaseJavaResource (Thread[Execution worker Thread 8,5,main]) started.
+
+> Task :modules:rhino:mergeReleaseJavaResource UP-TO-DATE
+Caching disabled for task ':modules:rhino:mergeReleaseJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:mergeReleaseJavaResource' as it is up-to-date.
+Resolve mutations for :modules:rhino:syncReleaseLibJars (Thread[Execution worker Thread 8,5,main]) started.
+:modules:rhino:syncReleaseLibJars (Thread[Execution worker Thread 8,5,main]) started.
+
+> Task :modules:rhino:syncReleaseLibJars UP-TO-DATE
+Caching disabled for task ':modules:rhino:syncReleaseLibJars' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:syncReleaseLibJars' as it is up-to-date.
+Resolve mutations for :modules:rhino:bundleReleaseLocalLintAar (Thread[Execution worker Thread 8,5,main]) started.
+:modules:rhino:bundleReleaseLocalLintAar (Thread[Execution worker Thread 8,5,main]) started.
+
+> Task :modules:rhino:bundleReleaseLocalLintAar UP-TO-DATE
+Caching disabled for task ':modules:rhino:bundleReleaseLocalLintAar' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:bundleReleaseLocalLintAar' as it is up-to-date.
+work action resolve out.aar (project :modules:rhino) (Thread[Execution worker Thread 8,5,main]) started.
+work action resolve out.aar (project :modules:rhino) (Thread[Execution worker Thread 8,5,main]) started.
+ExtractAarTransform (Thread[Execution worker Thread 8,5,main]) started.
+ExtractAarTransform (Thread[Execution worker Thread 5,5,main]) started.
+Resolve mutations for :modules:book:lintVitalAnalyzeRelease (Thread[Execution worker Thread 10,5,main]) started.
+:modules:book:lintVitalAnalyzeRelease (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:book:lintVitalAnalyzeRelease UP-TO-DATE
+Caching disabled for task ':modules:book:lintVitalAnalyzeRelease' because:
+  Build cache is disabled
+Skipping task ':modules:book:lintVitalAnalyzeRelease' as it is up-to-date.
+work action resolve out (project :modules:book) (Thread[Execution worker Thread 10,5,main]) started.
+work action resolve out (project :modules:book) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:book:writeReleaseLintModelMetadata (Thread[Execution worker Thread 10,5,main]) started.
+:modules:book:writeReleaseLintModelMetadata (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:book:writeReleaseLintModelMetadata UP-TO-DATE
+Caching disabled for task ':modules:book:writeReleaseLintModelMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:writeReleaseLintModelMetadata' as it is up-to-date.
+work action resolve lint-model-metadata.properties (project :modules:book) (Thread[Execution worker Thread 10,5,main]) started.
+work action resolve lint-model-metadata.properties (project :modules:book) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:rhino:lintVitalAnalyzeRelease (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:lintVitalAnalyzeRelease (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:lintVitalAnalyzeRelease UP-TO-DATE
+Caching disabled for task ':modules:rhino:lintVitalAnalyzeRelease' because:
+  Build cache is disabled
+Skipping task ':modules:rhino:lintVitalAnalyzeRelease' as it is up-to-date.
+work action resolve out (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+work action resolve out (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:rhino:writeReleaseLintModelMetadata (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:writeReleaseLintModelMetadata (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:writeReleaseLintModelMetadata UP-TO-DATE
+Caching disabled for task ':modules:rhino:writeReleaseLintModelMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:writeReleaseLintModelMetadata' as it is up-to-date.
+work action resolve lint-model-metadata.properties (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+work action resolve lint-model-metadata.properties (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:book:generateReleaseLintVitalModel (Thread[Execution worker Thread 10,5,main]) started.
+:modules:book:generateReleaseLintVitalModel (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:book:generateReleaseLintVitalModel UP-TO-DATE
+Caching disabled for task ':modules:book:generateReleaseLintVitalModel' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:book:generateReleaseLintVitalModel' as it is up-to-date.
+work action resolve generateReleaseLintVitalModel (project :modules:book) (Thread[Execution worker Thread 10,5,main]) started.
+work action resolve generateReleaseLintVitalModel (project :modules:book) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :modules:rhino:generateReleaseLintVitalModel (Thread[Execution worker Thread 10,5,main]) started.
+:modules:rhino:generateReleaseLintVitalModel (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :modules:rhino:generateReleaseLintVitalModel UP-TO-DATE
+Caching disabled for task ':modules:rhino:generateReleaseLintVitalModel' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':modules:rhino:generateReleaseLintVitalModel' as it is up-to-date.
+work action resolve generateReleaseLintVitalModel (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+work action resolve generateReleaseLintVitalModel (project :modules:rhino) (Thread[Execution worker Thread 10,5,main]) started.
+Resolve mutations for :app:collectAppReleaseDependencies (Thread[Execution worker Thread 10,5,main]) started.
+:app:collectAppReleaseDependencies (Thread[Execution worker Thread 10,5,main]) started.
+
+> Task :app:collectAppReleaseDependencies UP-TO-DATE
+Caching disabled for task ':app:collectAppReleaseDependencies' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:collectAppReleaseDependencies' as it is up-to-date.
+Resolve mutations for :app:sdkAppReleaseDependencyData (Thread[included builds,5,main]) started.
+:app:sdkAppReleaseDependencyData (Thread[included builds,5,main]) started.
+
+> Task :app:sdkAppReleaseDependencyData UP-TO-DATE
+Caching disabled for task ':app:sdkAppReleaseDependencyData' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:sdkAppReleaseDependencyData' as it is up-to-date.
+Resolve mutations for :app:validateSigningAppRelease (Thread[included builds,5,main]) started.
+:app:validateSigningAppRelease (Thread[included builds,5,main]) started.
+
+> Task :app:validateSigningAppRelease UP-TO-DATE
+Caching disabled for task ':app:validateSigningAppRelease' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:validateSigningAppRelease' as it is up-to-date.
+Resolve mutations for :app:writeAppReleaseAppMetadata (Thread[included builds,5,main]) started.
+:app:writeAppReleaseAppMetadata (Thread[included builds,5,main]) started.
+
+> Task :app:writeAppReleaseAppMetadata UP-TO-DATE
+Caching disabled for task ':app:writeAppReleaseAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeAppReleaseAppMetadata' as it is up-to-date.
+Resolve mutations for :app:writeAppReleaseSigningConfigVersions (Thread[included builds,5,main]) started.
+:app:writeAppReleaseSigningConfigVersions (Thread[included builds,5,main]) started.
+
+> Task :app:writeAppReleaseSigningConfigVersions UP-TO-DATE
+Caching disabled for task ':app:writeAppReleaseSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Skipping task ':app:writeAppReleaseSigningConfigVersions' as it is up-to-date.
+
+> Task :app:kspAppReleaseKotlin
+Caching disabled for task ':app:kspAppReleaseKotlin' because:
+  Build cache is disabled
+Task ':app:kspAppReleaseKotlin' is not up-to-date because:
+  Value of input property 'kspConfig.logLevel' has changed for task ':app:kspAppReleaseKotlin'
+The input changes require a full rebuild for incremental task ':app:kspAppReleaseKotlin'.
+file or directory 'C:\Users\Admin\legado-local\app\src\appRelease\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\appRelease\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\main\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\app\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\app\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\release\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\release\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\app\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\release\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\appRelease\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\appRelease\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\appRelease\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\main\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\app\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\app\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\release\kotlin', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\release\java', not found
+i: [ksp] loaded provider(s): [androidx.room.RoomKspProcessor$Provider, com.bumptech.glide.annotation.ksp.GlideSymbolProcessorProvider]
+i: [ksp] Found index annotation: GlideIndexer_GlideModule_ch_qoqa_glide_svg_SvgLibraryGlideModule with modules: [ch.qoqa.glide.svg.SvgLibraryGlideModule]
+i: [ksp] Found index annotation: GlideIndexer_GlideModule_com_bumptech_glide_integration_okhttp3_OkHttpLibraryGlideModule with modules: [com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule]
+Resolve mutations for :app:compileAppReleaseKotlin (Thread[Execution worker Thread 14,5,main]) started.
+:app:compileAppReleaseKotlin (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:compileAppReleaseKotlin UP-TO-DATE
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileAppDebugAndroidTestKotlin
+Registered task dependencies: app:kotlinCompilerClasspath
+Starting dependency analysis
+Registered task dependencies: app:kotlinCompilerPluginClasspathAppRelease
+Starting dependency analysis
+Caching disabled for task ':app:compileAppReleaseKotlin' because:
+  Build cache is disabled
+Skipping task ':app:compileAppReleaseKotlin' as it is up-to-date.
+Resolve mutations for :app:compileAppReleaseJavaWithJavac (Thread[Execution worker Thread 14,5,main]) started.
+:app:compileAppReleaseJavaWithJavac (Thread[Execution worker Thread 14,5,main]) started.
+
+> Task :app:compileAppReleaseJavaWithJavac FAILED
+file or directory 'C:\Users\Admin\legado-local\app\build\generated\ksp\appRelease\classes', not found
+file or directory 'C:\Users\Admin\legado-local\app\build\generated\ksp\appRelease\classes', not found
+Custom actions are attached to task ':app:compileAppReleaseJavaWithJavac'.
+Caching disabled for task ':app:compileAppReleaseJavaWithJavac' because:
+  Build cache is disabled
+Task ':app:compileAppReleaseJavaWithJavac' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':app:compileAppReleaseJavaWithJavac'.
+Compilation mode: in-process compilation
+file or directory 'C:\Users\Admin\legado-local\app\build\generated\ksp\appRelease\classes', not found
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\ojdkbuild\java-17-openjdk-17.0.3.0.6-1'.
+file or directory 'C:\Users\Admin\legado-local\app\src\app\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\release\java', not found
+file or directory 'C:\Users\Admin\legado-local\app\src\appRelease\java', not found
+Compiling with JDK Java compiler API.
+Resolve mutations for :app:copyRoomSchemas (Thread[Execution worker Thread 6,5,main]) started.
+:app:copyRoomSchemas (Thread[Execution worker Thread 6,5,main]) started.
+
+> Task :app:copyRoomSchemas NO-SOURCE
+Skipping task ':app:copyRoomSchemas' as it has no source files and no previous output files.
+Build 751706ef-a06b-4fe7-99e0-c2996232b995 is closed
+
+[Incubating] Problems report is available at: file:///C:/Users/Admin/legado-local/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+108 actionable tasks: 2 executed, 106 up-to-date
+Watched directory hierarchies: [C:\Users\Admin\legado-local]

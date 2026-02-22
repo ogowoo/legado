@@ -1,4 +1,4 @@
-﻿package io.dushu.app.model.analyzeRule;
+package io.dushu.app.model.analyzeRule;
 
 import androidx.annotation.Keep;
 
