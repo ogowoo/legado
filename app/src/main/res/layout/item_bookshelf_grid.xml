@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:scrollbars="none">
 
-            <io.legado.app.ui.widget.image.CoverImageView
+            <io.dushu.app.ui.widget.image.CoverImageView
                 android:id="@+id/iv_cover"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
                 tools:ignore="UnusedAttribute,ImageContrastCheck"
                 tools:layout_editor_absoluteX="8dp" />
 
-            <io.legado.app.ui.widget.text.BadgeView
+            <io.dushu.app.ui.widget.text.BadgeView
                 android:id="@+id/bv_unread"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="RtlHardcoded" />
 
-            <io.legado.app.ui.widget.anima.RotateLoading
+            <io.dushu.app.ui.widget.anima.RotateLoading
                 android:id="@+id/rl_loading"
                 android:layout_width="22dp"
                 android:layout_height="22dp"

@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.legado.app.ui.about.AboutActivity">
+    tools:context="io.dushu.app.ui.about.AboutActivity">
 
-    <io.legado.app.ui.widget.TitleBar
+    <io.dushu.app.ui.widget.TitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
                 android:text="@string/about_description_sigma" />
         </LinearLayout>
 
-    </io.legado.app.ui.widget.TitleBar>
+    </io.dushu.app.ui.widget.TitleBar>
 
     <FrameLayout
         android:id="@+id/fl_fragment"

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -40,7 +40,7 @@
             android:textColor="@color/secondaryText"
             tools:ignore="RtlHardcoded" />
 
-        <io.legado.app.ui.widget.text.AccentTextView
+        <io.dushu.app.ui.widget.text.AccentTextView
             android:id="@+id/tv_ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

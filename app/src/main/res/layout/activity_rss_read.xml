@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <io.legado.app.ui.widget.TitleBar
+        <io.dushu.app.ui.widget.TitleBar
             android:id="@+id/title_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             app:layout_constraintTop_toBottomOf="@+id/title_bar"
             app:layout_constraintBottom_toBottomOf="parent" />
 
-        <io.legado.app.ui.widget.anima.RefreshProgressBar
+        <io.dushu.app.ui.widget.anima.RefreshProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="match_parent"
             android:layout_height="1dp"

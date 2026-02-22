@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:title="@string/ai_settings">
 
-    <io.legado.app.lib.prefs.SwitchPreference
+    <io.dushu.app.lib.prefs.SwitchPreference
         android:key="aiContentRepairEnabled"
         android:title="@string/ai_content_repair"
         android:summary="@string/ai_content_repair_summary"
         android:defaultValue="false"
         app:iconSpaceReserved="false" />
 
-    <io.legado.app.lib.prefs.PreferenceCategory
+    <io.dushu.app.lib.prefs.PreferenceCategory
         android:title="@string/ai_provider_config"
         app:allowDividerAbove="false"
         app:allowDividerBelow="false"
         app:iconSpaceReserved="false"
         app:layout="@layout/view_preference_category">
 
-        <io.legado.app.lib.prefs.NameListPreference
+        <io.dushu.app.lib.prefs.NameListPreference
             android:key="aiRepairProvider"
             android:title="@string/ai_provider"
             android:summary="@string/ai_provider_summary"
             android:defaultValue="dashscope"
             app:iconSpaceReserved="false" />
 
-        <io.legado.app.lib.prefs.EditTextPreference
+        <io.dushu.app.lib.prefs.EditTextPreference
             android:key="aiRepairApiKey"
             android:title="@string/ai_repair_api_key"
             android:summary="@string/ai_repair_api_key_summary"
@@ -32,76 +32,76 @@
             android:dialogMessage="请输入API Key，可在对应AI提供商官网获取"
             app:iconSpaceReserved="false" />
 
-        <io.legado.app.lib.prefs.EditTextPreference
+        <io.dushu.app.lib.prefs.EditTextPreference
             android:key="aiRepairApiUrl"
             android:title="@string/ai_repair_api_url"
             android:summary="@string/ai_repair_api_url_summary"
             android:dialogMessage="留空使用默认地址，自定义OpenAI兼容服务需填写"
             app:iconSpaceReserved="false" />
 
-        <io.legado.app.lib.prefs.EditTextPreference
+        <io.dushu.app.lib.prefs.EditTextPreference
             android:key="aiRepairModel"
             android:title="@string/ai_repair_model"
             android:summary="@string/ai_repair_model_summary"
             android:dialogMessage="留空使用默认模型"
             app:iconSpaceReserved="false" />
 
-    </io.legado.app.lib.prefs.PreferenceCategory>
+    </io.dushu.app.lib.prefs.PreferenceCategory>
 
-    <io.legado.app.lib.prefs.PreferenceCategory
+    <io.dushu.app.lib.prefs.PreferenceCategory
         android:title="@string/ai_repair_settings"
         app:allowDividerAbove="false"
         app:allowDividerBelow="false"
         app:iconSpaceReserved="false"
         app:layout="@layout/view_preference_category">
 
-        <io.legado.app.lib.prefs.SwitchPreference
+        <io.dushu.app.lib.prefs.SwitchPreference
             android:key="aiAutoSaveCache"
             android:title="@string/ai_auto_save_cache"
             android:summary="@string/ai_auto_save_cache_summary"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-        <io.legado.app.lib.prefs.SwitchPreference
+        <io.dushu.app.lib.prefs.SwitchPreference
             android:key="aiPromptGenerateRules"
             android:title="@string/ai_prompt_generate_rules"
             android:summary="@string/ai_prompt_generate_rules_summary"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-    </io.legado.app.lib.prefs.PreferenceCategory>
+    </io.dushu.app.lib.prefs.PreferenceCategory>
 
-    <io.legado.app.lib.prefs.PreferenceCategory
+    <io.dushu.app.lib.prefs.PreferenceCategory
         android:title="@string/ai_rule_settings"
         app:allowDividerAbove="false"
         app:allowDividerBelow="false"
         app:iconSpaceReserved="false"
         app:layout="@layout/view_preference_category">
 
-        <io.legado.app.lib.prefs.SwitchPreference
+        <io.dushu.app.lib.prefs.SwitchPreference
             android:key="aiDefaultGeneralRule"
             android:title="@string/ai_default_general_rule"
             android:summary="@string/ai_default_general_rule_summary"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-        <io.legado.app.lib.prefs.SwitchPreference
+        <io.dushu.app.lib.prefs.SwitchPreference
             android:key="aiAutoApplyToBook"
             android:title="@string/ai_auto_apply_to_book"
             android:summary="@string/ai_auto_apply_to_book_summary"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-    </io.legado.app.lib.prefs.PreferenceCategory>
+    </io.dushu.app.lib.prefs.PreferenceCategory>
 
-    <io.legado.app.lib.prefs.PreferenceCategory
+    <io.dushu.app.lib.prefs.PreferenceCategory
         android:title="@string/ai_advanced_settings"
         app:allowDividerAbove="false"
         app:allowDividerBelow="false"
         app:iconSpaceReserved="false"
         app:layout="@layout/view_preference_category">
 
-        <io.legado.app.lib.prefs.EditTextPreference
+        <io.dushu.app.lib.prefs.EditTextPreference
             android:key="aiRepairTemperature"
             android:title="@string/ai_repair_temperature"
             android:summary="@string/ai_repair_temperature_summary"
@@ -109,7 +109,7 @@
             android:inputType="numberDecimal"
             app:iconSpaceReserved="false" />
 
-        <io.legado.app.lib.prefs.EditTextPreference
+        <io.dushu.app.lib.prefs.EditTextPreference
             android:key="aiRepairMaxTokens"
             android:title="@string/ai_repair_max_tokens"
             android:summary="@string/ai_repair_max_tokens_summary"
@@ -117,13 +117,13 @@
             android:inputType="number"
             app:iconSpaceReserved="false" />
 
-        <io.legado.app.lib.prefs.EditTextPreference
+        <io.dushu.app.lib.prefs.EditTextPreference
             android:key="aiRepairSystemPrompt"
             android:title="@string/ai_repair_system_prompt"
             android:summary="@string/ai_repair_system_prompt_summary"
             android:dialogLayout="@layout/dialog_edit_text"
             app:iconSpaceReserved="false" />
 
-    </io.legado.app.lib.prefs.PreferenceCategory>
+    </io.dushu.app.lib.prefs.PreferenceCategory>
 
 </androidx.preference.PreferenceScreen>
