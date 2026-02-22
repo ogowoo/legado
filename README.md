@@ -20,7 +20,7 @@
 - 正式版(plus)：新的共存包名，安装后是一个新软件，不会覆盖原版，每到一个稳定阶段进行一次更新
 #### 找不到下载地址可以去这里 [下载软件](https://gitee.com/lyc486/legado/releases)
 
-[![](https://img.shields.io/badge/-Contents:-696969.svg)](#contents) [![](https://img.shields.io/badge/-Function-F5F5F5.svg)](#Function-主要功能-) [![](https://img.shields.io/badge/-NewFeatures-F5F5F5.svg)](#NewFeatures-新增功能-) [![](https://img.shields.io/badge/-AIRepair-F5F5F5.svg)](#AIRepair-AI内容修正-) [![](https://img.shields.io/badge/-BestSource-F5F5F5.svg)](#BestSource-最优源选择-) [![](https://img.shields.io/badge/-Community-F5F5F5.svg)](#Community-交流社区-) [![](https://img.shields.io/badge/-API-F5F5F5.svg)](#API-) [![](https://img.shields.io/badge/-Other-F5F5F5.svg)](#Other-其他-)
+[![](https://img.shields.io/badge/-Contents:-696969.svg)](#contents) [![](https://img.shields.io/badge/-Function-F5F5F5.svg)](#Function-主要功能-) [![](https://img.shields.io/badge/-NewFeatures-F5F5F5.svg)](#NewFeatures-新增功能-) [![](https://img.shields.io/badge/-AIRepair-F5F5F5.svg)](#AIRepair-AI助手-) [![](https://img.shields.io/badge/-BestSource-F5F5F5.svg)](#BestSource-最优源选择-) [![](https://img.shields.io/badge/-Community-F5F5F5.svg)](#Community-交流社区-) [![](https://img.shields.io/badge/-API-F5F5F5.svg)](#API-) [![](https://img.shields.io/badge/-Other-F5F5F5.svg)](#Other-其他-)
 
 >新用户？
 >
@@ -29,24 +29,33 @@
 
 # NewFeatures-新增功能 [![](https://img.shields.io/badge/-NewFeatures-F5F5F5.svg)](#NewFeatures-新增功能-)
 
-## 🤖 AI 内容修正
+## 🤖 AI 助手中心
 
-支持使用 AI 自动修正小说内容中的错误，包括 OCR 识别错误、乱码、错字、漏字等。
+全新升级的 AI 助手系统，提供一站式 AI 功能入口和智能辅助。
 
-### 支持的 AI 提供商
+### AI 功能亮点
+- **AI 内容修正** - 阅读时自动修复错字、乱码、OCR错误
+- **AI 正则生成** - 根据自然语言描述智能生成替换规则
+- **AI 规则优化** - 智能检测替换规则冲突并给出优化建议
+- **AI 书源生成** - 根据描述自动生成书源规则（实验性）
+
+### 支持的 AI 提供商 (10+)
 - **阿里云 DashScope (通义千问)** ⭐ 推荐 - 新用户 100万 Token 免费
 - **智谱 AI (GLM)** - 新用户 1000万 Token 免费
 - **DeepSeek** - 价格低，中文表现好
 - **百度千帆 (文心一言)** - 有免费额度
+- **NVIDIA NIM** - 高性能推理
+- **Groq** - 极速响应
+- **SiliconFlow** - 中文优化
+- **Together AI** - 开源模型
 - **OpenAI** - 官方 API
 - **自定义 OpenAI 兼容** - 支持第三方代理
 
-### 使用方法
-1. 进入：我的 → 设置 → 阅读设置 → AI内容修正设置
-2. 开启"AI内容修正"
-3. 选择 AI 提供商（推荐阿里云或智谱 AI）
-4. 填写 API Key（从对应官网获取）
-5. 开始阅读，AI 会自动处理段落
+### 快速开始
+1. 进入：**我的 → AI助手**
+2. 开启"AI功能总开关"
+3. 选择提供商并填写 API Key
+4. 即可在各功能入口使用 AI 辅助
 
 ### 获取免费 API Key
 - 阿里云：https://dashscope.aliyun.com/（100万 Token 免费）
@@ -92,31 +101,54 @@
 7.支持高度自定义阅读界面，切换字体、颜色、背景、行距、段距、加粗、简繁转换等。<br>
 8.支持多种翻页模式，覆盖、仿真、滑动、滚动等。<br>
 9.软件开源，持续优化，无广告。<br>
-10.AI内容修正，自动修复错字乱码。<br>
-11.智能最优源选择，多维度对比书源质量。
+10.AI助手中心，提供内容修正、正则生成、规则优化等智能功能。<br>
+11.智能最优源选择，多维度对比书源质量。<br>
+12.全新AI主题图标设计。
 </details>
 
 <a href="#readme">
     <img src="https://img.shields.io/badge/-返回顶部-orange.svg" alt="#" align="right">
 </a>
 
-# AIRepair-AI内容修正 [![](https://img.shields.io/badge/-AIRepair-F5F5F5.svg)](#AIRepair-AI内容修正-)
+# AIRepair-AI助手 [![](https://img.shields.io/badge/-AIRepair-F5F5F5.svg)](#AIRepair-AI助手-)
 
-## 配置说明
+## 🤖 AI 功能概览
 
-### 1. 启用功能
-我的 → 设置 → 阅读设置 → AI内容修正 → 开启
+阅读Sigma 内置强大的 AI 助手，提供多种智能功能：
 
-### 2. 选择提供商
-- 阿里云 DashScope（推荐）
-- 智谱 AI（免费额度最多）
-- DeepSeek（价格最低）
-- 百度千帆
-- OpenAI
-- 自定义接口
+| 功能 | 入口位置 | 说明 |
+|------|----------|------|
+| **AI 内容修正** | 阅读页长按菜单 | 自动修复错字、乱码、漏字 |
+| **AI 替换规则生成** | 替换规则编辑页 | 根据描述智能生成正则表达式 |
+| **AI 规则优化** | 替换规则管理页 | 检测规则冲突并优化 |
+| **AI 书源生成** | AI助手中心 | 根据描述智能生成书源规则 |
 
-### 3. 获取 API Key
-各平台注册后创建 API Key，复制到设置中
+## 支持的 AI 提供商
+- **阿里云 DashScope (通义千问)** ⭐ 推荐 - 新用户 100万 Token 免费
+- **智谱 AI (GLM)** - 新用户 1000万 Token 免费
+- **DeepSeek** - 价格低，中文表现好
+- **百度千帆 (文心一言)** - 有免费额度
+- **OpenAI** - 官方 API
+- **NVIDIA NIM** - 高性能推理
+- **Groq** - 极速响应
+- **SiliconFlow** - 中文优化
+- **Together AI** - 开源模型
+- **自定义 OpenAI 兼容** - 支持第三方代理
+
+## 使用方法
+
+### 1. 开启 AI 助手
+进入：我的 → AI助手 → 开启"AI功能总开关"
+
+### 2. 配置 API
+- 选择 AI 提供商
+- 填写 API Key（从对应官网获取）
+- 测试连接
+
+### 3. 使用 AI 功能
+- **阅读时修正**：长按正文 → AI修正
+- **生成正则**：替换规则编辑 → AI生成
+- **优化规则**：替换规则管理 → AI优化提示
 
 ### 4. 高级设置
 - **模型选择**：不同提供商有不同模型
@@ -124,14 +156,19 @@
 - **最大 Token**：控制生成长度（默认 512）
 - **系统提示词**：可自定义 AI 角色
 
+## 获取免费 API Key
+- 阿里云：https://dashscope.aliyun.com/（100万 Token 免费）
+- 智谱 AI：https://open.bigmodel.cn/（1000万 Token 免费）
+- DeepSeek：https://platform.deepseek.com/
+
 ## 常见问题
 
-**Q: AI 修正为什么没有效果？**  
+**Q: AI 功能为什么没有效果？**  
 A: 请检查：
-1. API Key 是否正确
-2. 网络连接是否正常
-3. API 额度是否充足
-4. 查看日志（我的 → 关于 → 日志）
+1. 确认已开启"AI功能总开关"
+2. API Key 是否正确
+3. 网络连接是否正常
+4. API 额度是否充足
 
 **Q: 如何查看 AI 是否在工作？**  
 A: 查看日志会看到：
@@ -277,10 +314,4 @@ https://gedoor.github.io/Disclaimer
     <img src="https://img.shields.io/badge/-返回顶部-orange.svg" alt="#" align="right">
 </a>
 
-# Interface-界面 [![](https://img.shields.io/badge/-Interface-F5F5F5.svg)](#Interface-界面-)
-<img src="https://github.com/gedoor/gedoor.github.io/blob/master/static/img/legado/%E9%98%85%E8%AF%BB%E7%AE%80%E4%BB%8B1.jpg" width="270"><img src="https://github.com/gedoor/gedoor.github.io/blob/master/static/img/legado/%E9%98%85%E8%AF%BB%E7%AE%80%E4%BB%8B2.jpg" width="270"><img src="https://github.com/gedoor/gedoor.github.io/blob/master/static/img/legado/%E9%98%85%E8%AF%BB%E7%AE%80%E4%BB%8B3.jpg" width="270">
-<img src="https://github.com/gedoor/gedoor.github.io/blob/master/static/img/legado/%E9%98%85%E8%AF%BB%E7%AE%80%E4%BB%8B4.jpg" width="270"><img src="https://github.com/gedoor/gedoor.github.io/blob/master/static/img/legado/%E9%98%85%E8%AF%BB%E7%AE%80%E4%BB%8B5.jpg" width="270"><img src="https://github.com/gedoor/gedoor.github.io/blob/master/static/img/legado/%E9%98%85%E8%AF%BB%E7%AE%80%E4%BB%8B6.jpg" width="270">
 
-<a href="#readme">
-    <img src="https://img.shields.io/badge/-返回顶部-orange.svg" alt="#" align="right">
-</a>
