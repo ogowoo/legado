@@ -35,15 +35,9 @@ open class WelcomeActivity : BaseActivity<ActivityWelcomeBinding>() {
             // 避免从桌面启动程序后，会重新实例化入口类的activity
             finish()
         } else {
-            val welcomeShowTime = getPrefInt(PreferKey.welcomeShowTime, 500)
-            if (welcomeShowTime == 0) {
-                startMainActivity()
-            } else {
-                binding.root.postDelayed(welcomeShowTime.toLong()) { startMainActivity() }
-            }
+            // 直接跳转到主界面，不显示闪屏
+            startMainActivity()
         }
-        binding.ivBook.setColorFilter(accentColor)
-        binding.vwTitleLine.setBackgroundColor(accentColor)
     }
 
     override fun setupSystemBar() {
