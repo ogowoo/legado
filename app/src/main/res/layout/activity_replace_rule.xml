@@ -15,6 +15,70 @@
         app:contentLayout="@layout/view_search"
         app:title="@string/replace_purify" />
 
+    <!-- AI智能提示 -->
+    <LinearLayout
+        android:id="@+id/card_ai_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="@drawable/bg_edit">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_ai"
+            app:tint="@color/accent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ai_optimize_hint_title"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/primaryText" />
+
+            <TextView
+                android:id="@+id/tv_ai_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ai_optimize_hint_summary"
+                android:textSize="12sp"
+                android:textColor="@color/secondaryText"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ai_optimize"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optimize"
+            android:textSize="12sp"
+            android:textColor="@color/accent" />
+
+        <ImageButton
+            android:id="@+id/btn_close_hint"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_close"
+            android:contentDescription="@string/close"
+            app:tint="@color/secondaryText" />
+
+    </LinearLayout>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"

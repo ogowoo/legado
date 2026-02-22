@@ -875,6 +875,15 @@ class ReadBookActivity : BaseReadBookActivity(),
                 return true
             }
 
+            R.id.menu_ai_repair -> {
+                // 打开AI修复对话框
+                val selectedText = binding.readView.getSelectText()
+                if (selectedText.isNotBlank()) {
+                    showAiRepairCompareDialog(selectedText, selectedText)
+                }
+                return true
+            }
+
             R.id.menu_replace -> {
                 val scopes = arrayListOf<String>()
                 ReadBook.book?.name?.let {
@@ -1173,6 +1182,22 @@ class ReadBookActivity : BaseReadBookActivity(),
     }
     
     /**
+     * 显示AI修复对比对话框
+     */
+    private fun showAiRepairCompareDialog(originalText: String, contextText: String) {
+        if (!AppConfig.aiContentRepairEnabled) {
+            toastOnUi("请先启用AI内容修复功能")
+            return
+        }
+        showDialogFragment(
+            AiRepairCompareDialog.newInstance(
+                originalText = originalText,
+                contextText = contextText
+            )
+        )
+    }
+
+    /**
      * AI生成替换规则回调
      */
     override fun onAiRepairGenerateRules(originalText: String, repairedText: String) {
@@ -1287,6 +1312,11 @@ class ReadBookActivity : BaseReadBookActivity(),
      */
     override fun showMoreSetting() {
         showDialogFragment<MoreConfigDialog>()
+    }
+
+    override fun showMoreMenu() {
+        // 显示更多菜单弹窗
+        showMoreSetting()
     }
 
     override fun showSearchSetting() {

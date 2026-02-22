@@ -1237,6 +1237,8 @@
     <string name="auto_check_new_backup_s">打开软件时检查是否有新备份，有新备份时提示是否更新</string>
     <string name="sys_image_picker">系统图片选择器</string>
     <!-- AI 内容修正 -->
+    <string name="ai_repair">AI修复</string>
+    <string name="test_replace_rule">测试替换效果</string>
     <string name="ai_content_repair">AI内容修正</string>
     <string name="ai_content_repair_summary">使用AI根据上下文自动纠正错字、乱序等问题</string>
     <string name="ai_content_repair_category">AI内容修正设置</string>
@@ -1273,6 +1275,30 @@
     <string name="ai_repair_mode_preview">长按预览</string>
     <string name="ai_repair_preview">AI修正预览</string>
     <string name="ai_repair_preview_summary">长按文字预览AI修正效果</string>
+    <string name="ai_settings">AI助手设置</string>
+    <string name="ai_setting_summary">配置AI内容修复和规则生成</string>
+    <string name="ai_assistant">AI助手</string>
+    <string name="ai_assistant_summary">内容修复、规则生成、智能优化</string>
+    <string name="ai_generate">生成</string>
+    <string name="ai_optimize">优化</string>
+    <string name="ai_regex_generate">正则生成</string>
+    <string name="settings">设置</string>
+    <string name="more">更多</string>
+    <string name="ai_optimize_hint_title">AI优化建议</string>
+    <string name="ai_optimize_hint_summary">检测到%d条规则可以合并优化</string>
+    <string name="optimize">优化</string>
+    <string name="ai_provider_config">AI提供商配置</string>
+    <string name="ai_repair_settings">内容修复设置</string>
+    <string name="ai_rule_settings">规则生成设置</string>
+    <string name="ai_advanced_settings">高级设置</string>
+    <string name="ai_auto_save_cache">自动保存修复缓存</string>
+    <string name="ai_auto_save_cache_summary">自动保存AI修复后的内容，下次快速查看</string>
+    <string name="ai_prompt_generate_rules">提示生成规则</string>
+    <string name="ai_prompt_generate_rules_summary">AI修复后提示是否生成替换规则</string>
+    <string name="ai_default_general_rule">默认使用通用规则</string>
+    <string name="ai_default_general_rule_summary">默认生成通用正则规则，关闭则生成特定文本规则</string>
+    <string name="ai_auto_apply_to_book">自动应用规则到本书</string>
+    <string name="ai_auto_apply_to_book_summary">自动将生成的规则应用到当前书籍</string>
 
     <string name="use_best_source">使用最优源</string>
     <string name="best_source_selected">已选择最优源: %1$s (评分: %2$d)</string>

@@ -20,6 +20,7 @@ import io.legado.app.lib.theme.primaryColor
 import io.legado.app.service.WebService
 import io.legado.app.ui.about.AboutActivity
 import io.legado.app.ui.about.ReadRecordActivity
+import io.legado.app.ui.ai.AiCenterActivity
 import io.legado.app.ui.book.bookmark.AllBookmarkActivity
 import io.legado.app.ui.book.source.manage.BookSourceActivity
 import io.legado.app.ui.book.toc.rule.TxtTocRuleActivity
@@ -149,6 +150,7 @@ class MyFragment() : BaseFragment(R.layout.fragment_my_config), MainFragmentInte
                 "dictRuleManage" -> startActivity<DictRuleActivity>()
                 "txtTocRuleManage" -> startActivity<TxtTocRuleActivity>()
                 "bookmark" -> startActivity<AllBookmarkActivity>()
+                "aiCenter" -> startActivity<AiCenterActivity>()
                 "setting" -> startActivity<ConfigActivity> {
                     putExtra("configTag", ConfigTag.OTHER_CONFIG)
                 }

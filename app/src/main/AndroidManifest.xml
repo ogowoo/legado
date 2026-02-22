@@ -218,6 +218,10 @@
         <activity
             android:name=".ui.config.ConfigActivity"
             android:launchMode="standard" />
+        <!-- AI助手中心 -->
+        <activity
+            android:name=".ui.ai.AiCenterActivity"
+            android:launchMode="standard" />
         <!-- 搜索界面 -->
         <activity
             android:name=".ui.book.search.SearchActivity"

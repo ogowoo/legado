@@ -18,6 +18,7 @@ import io.legado.app.databinding.ActivityReplaceEditBinding
 import io.legado.app.lib.dialogs.SelectItem
 import io.legado.app.ui.code.CodeEditActivity
 import io.legado.app.ui.widget.keyboard.KeyboardToolPop
+import io.legado.app.ui.replace.edit.AiRegexGenerateDialog
 import io.legado.app.utils.GSON
 import io.legado.app.utils.imeHeight
 import io.legado.app.utils.sendToClip
@@ -31,7 +32,8 @@ import io.legado.app.utils.viewbindingdelegate.viewBinding
  */
 class ReplaceEditActivity :
     VMBaseActivity<ActivityReplaceEditBinding, ReplaceEditViewModel>(),
-    KeyboardToolPop.CallBack {
+    KeyboardToolPop.CallBack,
+    AiRegexGenerateDialog.CallBack {
 
     companion object {
 
@@ -129,10 +131,25 @@ class ReplaceEditActivity :
         binding.ivHelp.setOnClickListener {
             showHelp("regexHelp")
         }
+        binding.btnAiGenerate.setOnClickListener {
+            showAiRegexGenerateDialog()
+        }
         binding.root.setOnApplyWindowInsetsListenerCompat { _, windowInsets ->
             softKeyboardTool.initialPadding = windowInsets.imeHeight
             windowInsets
         }
+    }
+
+    private fun showAiRegexGenerateDialog() {
+        AiRegexGenerateDialog.newInstance()
+            .show(supportFragmentManager, AiRegexGenerateDialog.TAG)
+    }
+
+    override fun onRegexGenerated(pattern: String) {
+        binding.etReplaceRule.setText(pattern)
+        // 自动勾选使用正则
+        binding.cbUseRegex.isChecked = true
+        toastOnUi("正则表达式已生成并填入")
     }
 
     private fun upReplaceView(replaceRule: ReplaceRule) = binding.run {

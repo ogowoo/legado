@@ -585,6 +585,13 @@ class ReadMenu @JvmOverloads constructor(
                 callBack.showMoreSetting()
             }
         }
+
+        //更多
+        llMore.setOnClickListener {
+            runMenuOut {
+                callBack.showMoreMenu()
+            }
+        }
     }
 
     private fun initAnimation() {
@@ -678,6 +685,7 @@ class ReadMenu @JvmOverloads constructor(
         fun skipToChapter(index: Int)
         fun onMenuShow()
         fun onMenuHide()
+        fun showMoreMenu()
     }
 
 }

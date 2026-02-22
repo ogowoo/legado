@@ -209,15 +209,6 @@ class MoreConfigDialog : BasePrefDialogFragment() {
                             postEvent(EventBus.UP_CONFIG, arrayListOf(12))
                         }
                 }
-
-                "importAiFilterRules" -> {
-                    if (DefaultReplaceRules.isImported()) {
-                        toastOnUi(R.string.ai_filter_rules_already_imported)
-                    } else {
-                        DefaultReplaceRules.importAiFilterRules()
-                        toastOnUi(R.string.ai_filter_rules_imported)
-                    }
-                }
             }
             return super.onPreferenceTreeClick(preference)
         }

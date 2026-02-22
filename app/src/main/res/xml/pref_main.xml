@@ -4,6 +4,13 @@
     android:divider="@color/transparent"
     app:allowDividerBelow="false">
 
+    <!-- AI助手 -->
+    <io.legado.app.lib.prefs.Preference
+        android:icon="@drawable/ic_ai"
+        android:key="aiCenter"
+        android:summary="@string/ai_assistant_summary"
+        android:title="@string/ai_assistant" />
+
     <io.legado.app.lib.prefs.Preference
         android:icon="@drawable/ic_cfg_source"
         android:key="bookSourceManage"

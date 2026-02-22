@@ -52,18 +52,37 @@
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
             </io.legado.app.ui.widget.text.TextInputLayout>
 
-            <io.legado.app.ui.widget.text.TextInputLayout
-                android:id="@+id/til_replace_rule"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/replace_rule">
+                android:orientation="horizontal"
+                android:gravity="bottom">
 
-                <io.legado.app.lib.theme.view.ThemeEditText
-                    android:id="@+id/et_replace_rule"
-                    android:layout_width="match_parent"
+                <io.legado.app.ui.widget.text.TextInputLayout
+                    android:id="@+id/til_replace_rule"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-            </io.legado.app.ui.widget.text.TextInputLayout>
+                    android:layout_weight="1"
+                    android:hint="@string/replace_rule">
+
+                    <io.legado.app.lib.theme.view.ThemeEditText
+                        android:id="@+id/et_replace_rule"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                </io.legado.app.ui.widget.text.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/btn_ai_generate"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_ai"
+                    android:contentDescription="AI生成正则"
+                    app:tint="@color/accent" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -101,6 +120,14 @@
                     android:layout_height="wrap_content"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
             </io.legado.app.ui.widget.text.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_test_replace"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/test_replace_rule"
+                android:textSize="14sp" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"

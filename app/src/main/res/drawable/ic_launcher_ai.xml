@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 背景圆形 -->
+    <path
+        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"
+        android:fillColor="#7C4DFF" />
+    
+    <!-- 书本形状 -->
+    <path
+        android:pathData="M32,38 L32,70 L54,75 L76,70 L76,38 L54,43 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.95" />
+    
+    <!-- 书页左侧 -->
+    <path
+        android:pathData="M34,40 L34,68 L52,72 L52,45 Z"
+        android:fillColor="#F5F5F5" />
+    
+    <!-- 书页右侧 -->
+    <path
+        android:pathData="M56,45 L56,72 L74,68 L74,40 Z"
+        android:fillColor="#F5F5F5" />
+    
+    <!-- 书脊 -->
+    <path
+        android:pathData="M52,45 L52,72 L56,72 L56,45 Z"
+        android:fillColor="#E0E0E0" />
+    
+    <!-- AI星星/闪光 - 左上 -->
+    <path
+        android:pathData="M28,32 L30,36 L34,37 L31,40 L32,44 L28,42 L24,44 L25,40 L22,37 L26,36 Z"
+        android:fillColor="#FFD700" />
+    
+    <!-- AI星星/闪光 - 右上 -->
+    <path
+        android:pathData="M80,32 L82,36 L86,37 L83,40 L84,44 L80,42 L76,44 L77,40 L74,37 L78,36 Z"
+        android:fillColor="#FFD700" />
+    
+    <!-- AI星星/闪光 - 顶部中央 -->
+    <path
+        android:pathData="M54,22 L55.5,26 L60,27 L56.5,30 L57.5,35 L54,32 L50.5,35 L51.5,30 L48,27 L52.5,26 Z"
+        android:fillColor="#FFD700" />
+    
+    <!-- 底部装饰线 -->
+    <path
+        android:pathData="M38,78 L54,82 L70,78"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeAlpha="0.6"
+        android:fillColor="#00000000" />
+</vector>

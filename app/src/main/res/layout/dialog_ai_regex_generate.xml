@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AI生成正则表达式"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryText"
+        android:gravity="center"
+        android:paddingBottom="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/secondaryText"
+        android:gravity="center"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="输入要匹配的文本示例："
+            android:textSize="14sp"
+            android:textColor="@color/secondaryText"
+            android:paddingBottom="4dp" />
+
+        <io.legado.app.lib.theme.view.ThemeEditText
+            android:id="@+id/et_sample_text"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_edit"
+            android:gravity="top|start"
+            android:hint="例如：\n本章未完，点击继续阅读\n本章未完，请点击下一页"
+            android:padding="12dp"
+            android:textSize="14sp"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/btn_generate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生成正则表达式"
+            android:textSize="14sp"
+            android:textColor="@color/background"
+            android:backgroundTint="@color/accent"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生成的正则表达式："
+            android:textSize="14sp"
+            android:textColor="@color/secondaryText"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp" />
+
+        <io.legado.app.lib.theme.view.ThemeEditText
+            android:id="@+id/et_generated_pattern"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_edit"
+            android:gravity="top|start"
+            android:hint="点击上方按钮生成..."
+            android:padding="12dp"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:scrollbars="vertical" />
+
+        <io.legado.app.lib.theme.view.ThemeCheckBox
+            android:id="@+id/cb_is_regex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用正则表达式"
+            android:checked="true"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/secondaryText"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textSize="14sp"
+                style="?android:attr/borderlessButtonStyle" />
+
+            <Button
+                android:id="@+id/btn_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="应用"
+                android:textSize="14sp"
+                android:textColor="@color/background"
+                android:backgroundTint="@color/accent"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

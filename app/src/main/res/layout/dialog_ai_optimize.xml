@@ -33,47 +33,57 @@
         android:gravity="center"
         android:padding="8dp" />
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/content_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        android:orientation="vertical"
+        android:visibility="gone">
 
-        <TextView
-            android:id="@+id/tv_result"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_menu"
+                android:padding="12dp"
+                android:textSize="13sp"
+                android:textColor="@color/primaryText"
+                android:visibility="gone" />
+        </ScrollView>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/background_menu"
-            android:padding="12dp"
-            android:textSize="13sp"
-            android:textColor="@color/primaryText"
-            android:visibility="gone" />
-    </ScrollView>
+            android:orientation="horizontal"
+            android:gravity="end">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="end">
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textSize="14sp"
+                style="?android:attr/borderlessButtonStyle" />
 
-        <Button
-            android:id="@+id/btn_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cancel"
-            android:textSize="14sp"
-            style="?android:attr/borderlessButtonStyle" />
+            <Button
+                android:id="@+id/btn_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ok"
+                android:textSize="14sp"
+                android:textColor="@color/background"
+                android:backgroundTint="@color/accent"
+                android:visibility="gone" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_apply"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ok"
-            android:textSize="14sp"
-            android:textColor="@color/background"
-            android:backgroundTint="@color/accent"
-            android:visibility="gone" />
     </LinearLayout>
 
 </LinearLayout>

@@ -1,17 +1,14 @@
 package io.legado.app.ui.book.read
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
 import io.legado.app.R
 import io.legado.app.ai.ContentRepairService
 import io.legado.app.databinding.DialogAiRepairCompareBinding
-import io.legado.app.lib.theme.backgroundColor
-import io.legado.app.lib.theme.primaryColor
-import io.legado.app.utils.setLayout
+import io.legado.app.ui.widget.dialog.BaseAiDialog
 import io.legado.app.utils.viewbindingdelegate.viewBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,11 +18,15 @@ import kotlinx.coroutines.withContext
  * AI 内容修正对比弹窗
  * 长按后显示修正前后的对比
  */
-class AiRepairCompareDialog : DialogFragment(R.layout.dialog_ai_repair_compare) {
+class AiRepairCompareDialog : BaseAiDialog(R.layout.dialog_ai_repair_compare) {
 
     private val binding by viewBinding(DialogAiRepairCompareBinding::bind)
     private var originalText: String = ""
     private var contextText: String = ""
+    
+    override val progressBar: ProgressBar? by lazy { binding.progressBar }
+    override val tvStatus: TextView? by lazy { binding.tvStatus }
+    override val contentView: View? by lazy { binding.contentContainer }
 
     companion object {
         const val TAG = "AiRepairCompareDialog"
@@ -42,25 +43,17 @@ class AiRepairCompareDialog : DialogFragment(R.layout.dialog_ai_repair_compare) 
         }
     }
 
-    override fun onStart() {
-        super.onStart()
-        setLayout(0.9f, 0.8f)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.root.setBackgroundColor(backgroundColor)
-        
+    override fun initView() {
         originalText = arguments?.getString(ARG_ORIGINAL_TEXT) ?: ""
         contextText = arguments?.getString(ARG_CONTEXT_TEXT) ?: ""
         
-        initView()
+        setupView()
         performAiRepair()
     }
-
-    private fun initView() {
+    
+    private fun setupView() {
         binding.tvOriginal.text = originalText
-        binding.progressBar.visibility = View.VISIBLE
+        showLoading("正在进行AI内容修复...")
         binding.tvRepaired.visibility = View.GONE
         binding.tvDiff.visibility = View.GONE
         
@@ -92,7 +85,7 @@ class AiRepairCompareDialog : DialogFragment(R.layout.dialog_ai_repair_compare) 
                 val repairedText = ContentRepairService.repair(contextText, originalText)
                 
                 withContext(Dispatchers.Main) {
-                    binding.progressBar.visibility = View.GONE
+                    hideLoading()
                     binding.tvRepaired.visibility = View.VISIBLE
                     binding.tvRepaired.text = repairedText
                     
@@ -112,7 +105,7 @@ class AiRepairCompareDialog : DialogFragment(R.layout.dialog_ai_repair_compare) 
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    binding.progressBar.visibility = View.GONE
+                    showError("修正失败: ${e.message}")
                     binding.tvRepaired.visibility = View.VISIBLE
                     binding.tvRepaired.text = "修正失败: ${e.message}"
                     binding.btnApply.visibility = View.GONE

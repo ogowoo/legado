@@ -120,8 +120,34 @@ class ReplaceRuleActivity : VMBaseActivity<ActivityReplaceRuleBinding, ReplaceRu
         initRecyclerView()
         initSearchView()
         initSelectActionView()
+        initAiHint()
         observeReplaceRuleData()
         observeGroupData()
+    }
+
+    private fun initAiHint() {
+        // 关闭提示按钮
+        binding.btnCloseHint.setOnClickListener {
+            binding.cardAiHint.visibility = android.view.View.GONE
+        }
+        // 优化按钮
+        binding.btnAiOptimize.setOnClickListener {
+            showDialogFragment(AiOptimizeDialog())
+        }
+    }
+
+    private fun checkAiOptimizeHint(rules: List<ReplaceRule>) {
+        // 简单启发式检测：如果规则数量较多，显示提示
+        val enabledRules = rules.filter { it.isEnabled }
+        if (enabledRules.size >= 10) {
+            lifecycleScope.launch {
+                delay(500) // 延迟显示，避免页面刚打开就弹出
+                binding.tvAiHint.text = getString(R.string.ai_optimize_hint_summary, enabledRules.size / 3)
+                binding.cardAiHint.visibility = android.view.View.VISIBLE
+            }
+        } else {
+            binding.cardAiHint.visibility = android.view.View.GONE
+        }
     }
 
     override fun onCompatCreateOptionsMenu(menu: Menu): Boolean {
@@ -219,6 +245,7 @@ class ReplaceRuleActivity : VMBaseActivity<ActivityReplaceRuleBinding, ReplaceRu
                     setResult(RESULT_OK)
                 }
                 adapter.setItems(it, adapter.diffItemCallBack)
+                checkAiOptimizeHint(it)
                 dataInit = true
                 delay(100)
             }

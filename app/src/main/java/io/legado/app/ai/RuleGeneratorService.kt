@@ -78,14 +78,24 @@ object RuleGeneratorService {
 - 规则名称格式：类型-具体描述（如：过滤-XXX、修正-XXX）"""
 
     /**
+     * 规则生成类型
+     */
+    enum class RuleType {
+        GENERAL,  // 通用规则 - 使用正则表达式匹配同类内容
+        SPECIFIC  // 特定规则 - 精确匹配特定文本
+    }
+
+    /**
      * 生成替换规则
      * @param originalText 原文
      * @param repairedText 修正后的文本
+     * @param ruleType 规则类型：通用规则或特定规则
      * @return 生成的替换规则列表
      */
     suspend fun generateRules(
         originalText: String,
-        repairedText: String
+        repairedText: String,
+        ruleType: RuleType = RuleType.GENERAL
     ): List<GeneratedReplaceRule> = withContext(Dispatchers.IO) {
         // 检查功能是否启用
         if (!AppConfig.aiContentRepairEnabled) {
@@ -116,6 +126,12 @@ object RuleGeneratorService {
             ?: return@withContext emptyList()
 
         try {
+            // 根据规则类型选择提示词
+            val systemPrompt = when (ruleType) {
+                RuleType.GENERAL -> DEFAULT_RULE_GENERATOR_PROMPT
+                RuleType.SPECIFIC -> SPECIFIC_RULE_GENERATOR_PROMPT
+            }
+
             // 构建请求内容
             val userContent = buildString {
                 appendLine("原文：")
@@ -127,7 +143,7 @@ object RuleGeneratorService {
 
             // 构建请求体
             val payload = provider.buildRequestBody(
-                systemPrompt = DEFAULT_RULE_GENERATOR_PROMPT,
+                systemPrompt = systemPrompt,
                 userContent = userContent,
                 model = model,
                 temperature = 0.1, // 低温度确保稳定的规则生成
@@ -162,7 +178,14 @@ object RuleGeneratorService {
                 ?: return@withContext emptyList()
 
             // 解析JSON规则
-            return@withContext parseGeneratedRules(resultText)
+            val rules = parseGeneratedRules(resultText)
+            
+            // 特定规则模式：设置isRegex为false
+            return@withContext if (ruleType == RuleType.SPECIFIC) {
+                rules.map { it.copy(isRegex = false) }
+            } else {
+                rules
+            }
 
         } catch (e: Exception) {
             e.printStackTrace()
@@ -225,14 +248,16 @@ object RuleGeneratorService {
                 group = groupName,
                 scope = scope,
                 scopeContent = true,
-                isRegex = true,
+                isRegex = generatedRule.isRegex, // 使用规则中的isRegex设置
                 isEnabled = true,
                 order = Int.MIN_VALUE + index // 确保新规则排在前面
             )
             
-            // 检查是否已存在相同规则
+            // 检查是否已存在相同规则（考虑isRegex）
             val existing = appDb.replaceRuleDao.all.find { 
-                it.pattern == replaceRule.pattern && it.scope == replaceRule.scope 
+                it.pattern == replaceRule.pattern && 
+                it.scope == replaceRule.scope &&
+                it.isRegex == replaceRule.isRegex
             }
             
             if (existing == null) {
@@ -246,12 +271,61 @@ object RuleGeneratorService {
         return savedRules
     }
 
+    // 特定规则生成提示词 - 用于生成精确匹配的替换规则
+    private const val SPECIFIC_RULE_GENERATOR_PROMPT = """你是一个专业的网络小说文本清洗专家。
+
+任务：分析原文和修正后的文本差异，识别被删除或修改的具体内容，生成精确的特定替换规则。
+
+重点识别以下类型的内容：
+1. 网站引流提示："本章未完，点击继续阅读"、"请点击下一页"等（精确保留原文）
+2. 广告推广标记："【广告】"、"【推广】"等具体标记
+3. 平台提示信息："手机站"、"移动版"、"APP阅读更流畅"等
+4. 系统通知："重要通知"、"系统提示"等具体文本
+5. URL链接：具体的http://、https://链接
+6. 特定错字：原文中的错别字
+
+输入格式：
+原文：[原始文本]
+修正后：[修正后的文本]
+
+输出要求：
+1. 只返回JSON格式的规则数组，不要任何解释文字
+2. 每个规则包含：name(规则名称), pattern(精确匹配文本), replacement(替换为，通常为空)
+3. pattern必须是原文中实际存在的精确文本（不是正则表达式）
+4. replacement为空字符串表示删除该内容
+5. 如果无法生成有效规则，返回空数组 []
+
+示例输出格式：
+[
+  {
+    "name": "删除-本章未完提示",
+    "pattern": "本章未完，点击继续阅读",
+    "replacement": ""
+  },
+  {
+    "name": "删除-广告标记",
+    "pattern": "【广告】",
+    "replacement": ""
+  },
+  {
+    "name": "修正-OCR错字",
+    "pattern": "攻瑰",
+    "replacement": "玫瑰"
+  }
+]
+
+重要提示：
+- pattern必须是原文中的精确文本，不要使用通配符或正则表达式
+- 优先识别并删除无意义的网站提示和广告内容
+- 对于修改的内容，记录原文和修正后的文本"""
+
     /**
      * 生成的替换规则数据类
      */
     data class GeneratedReplaceRule(
         val name: String,
         val pattern: String,
-        val replacement: String = ""
+        val replacement: String = "",
+        val isRegex: Boolean = true
     )
 }
