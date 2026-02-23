@@ -121,7 +121,7 @@
             android:key="aiRepairSystemPrompt"
             android:title="@string/ai_repair_system_prompt"
             android:summary="@string/ai_repair_system_prompt_summary"
-            android:dialogLayout="@layout/dialog_edit_text"
+            android:dialogLayout="@layout/dialog_edit_text_preference"
             app:iconSpaceReserved="false" />
 
     </io.dushu.app.lib.prefs.PreferenceCategory>
